@@ -31,9 +31,9 @@ namespace POSWFs
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Usuario));
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.lblUsuarioNombre = new System.Windows.Forms.TextBox();
+            this.lblUsuario = new System.Windows.Forms.TextBox();
+            this.lblUsuarioCodigo = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -51,35 +51,36 @@ namespace POSWFs
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(19, 56);
+            this.label1.Location = new System.Drawing.Point(65, 54);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(149, 22);
+            this.label1.Size = new System.Drawing.Size(90, 22);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Administrador:";
+            this.label1.Text = "Nombre:";
             // 
-            // textBox1
+            // lblUsuarioNombre
             // 
-            this.textBox1.Location = new System.Drawing.Point(190, 58);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 8;
+            this.lblUsuarioNombre.Location = new System.Drawing.Point(161, 58);
+            this.lblUsuarioNombre.Name = "lblUsuarioNombre";
+            this.lblUsuarioNombre.Size = new System.Drawing.Size(129, 20);
+            this.lblUsuarioNombre.TabIndex = 8;
             // 
-            // textBox2
+            // lblUsuario
             // 
-            this.textBox2.Location = new System.Drawing.Point(190, 95);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 9;
+            this.lblUsuario.Location = new System.Drawing.Point(160, 95);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(130, 20);
+            this.lblUsuario.TabIndex = 9;
             // 
-            // textBox3
+            // lblUsuarioCodigo
             // 
-            this.textBox3.Location = new System.Drawing.Point(190, 132);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 10;
+            this.lblUsuarioCodigo.Location = new System.Drawing.Point(161, 132);
+            this.lblUsuarioCodigo.Name = "lblUsuarioCodigo";
+            this.lblUsuarioCodigo.Size = new System.Drawing.Size(129, 20);
+            this.lblUsuarioCodigo.TabIndex = 10;
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(425, 28);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(214, 199);
@@ -92,7 +93,7 @@ namespace POSWFs
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(24, 132);
+            this.label2.Location = new System.Drawing.Point(65, 132);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(84, 22);
             this.label2.TabIndex = 12;
@@ -104,7 +105,7 @@ namespace POSWFs
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(19, 95);
+            this.label3.Location = new System.Drawing.Point(65, 95);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(89, 22);
             this.label3.TabIndex = 13;
@@ -113,7 +114,7 @@ namespace POSWFs
             // btnPrincipal
             // 
             this.btnPrincipal.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrincipal.Location = new System.Drawing.Point(28, 234);
+            this.btnPrincipal.Location = new System.Drawing.Point(69, 234);
             this.btnPrincipal.Name = "btnPrincipal";
             this.btnPrincipal.Size = new System.Drawing.Size(119, 42);
             this.btnPrincipal.TabIndex = 14;
@@ -123,7 +124,7 @@ namespace POSWFs
             // btnAdmUsuarios
             // 
             this.btnAdmUsuarios.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdmUsuarios.Location = new System.Drawing.Point(201, 234);
+            this.btnAdmUsuarios.Location = new System.Drawing.Point(234, 234);
             this.btnAdmUsuarios.Name = "btnAdmUsuarios";
             this.btnAdmUsuarios.Size = new System.Drawing.Size(155, 42);
             this.btnAdmUsuarios.TabIndex = 15;
@@ -133,9 +134,9 @@ namespace POSWFs
             // btnCambiarContra
             // 
             this.btnCambiarContra.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCambiarContra.Location = new System.Drawing.Point(28, 307);
+            this.btnCambiarContra.Location = new System.Drawing.Point(28, 308);
             this.btnCambiarContra.Name = "btnCambiarContra";
-            this.btnCambiarContra.Size = new System.Drawing.Size(204, 42);
+            this.btnCambiarContra.Size = new System.Drawing.Size(188, 42);
             this.btnCambiarContra.TabIndex = 16;
             this.btnCambiarContra.Text = "Cambiar contraseña";
             this.btnCambiarContra.UseVisualStyleBackColor = true;
@@ -143,9 +144,9 @@ namespace POSWFs
             // btnCerrarSesion
             // 
             this.btnCerrarSesion.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrarSesion.Location = new System.Drawing.Point(250, 307);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(244, 307);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(188, 43);
+            this.btnCerrarSesion.Size = new System.Drawing.Size(145, 43);
             this.btnCerrarSesion.TabIndex = 17;
             this.btnCerrarSesion.Text = "Cerrar sesión";
             this.btnCerrarSesion.UseVisualStyleBackColor = true;
@@ -174,9 +175,9 @@ namespace POSWFs
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.lblUsuarioCodigo);
+            this.Controls.Add(this.lblUsuario);
+            this.Controls.Add(this.lblUsuarioNombre);
             this.Controls.Add(this.label1);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(676, 483);
@@ -186,6 +187,7 @@ namespace POSWFs
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Usuario";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Usuario_FormClosed);
+            this.Load += new System.EventHandler(this.Usuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -195,9 +197,9 @@ namespace POSWFs
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox lblUsuarioNombre;
+        private System.Windows.Forms.TextBox lblUsuario;
+        private System.Windows.Forms.TextBox lblUsuarioCodigo;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

@@ -19,6 +19,8 @@ namespace POSWFs
             InitializeComponent();
         }
 
+        public static String codigo = "";
+
         private void button1_Click(object sender, EventArgs e)
         {
             //Biblioteca.Herramientas("Select * FROM Clientes where id = 1");
@@ -26,6 +28,9 @@ namespace POSWFs
             {
                 string validar = string.Format("Select * FROM Usuarios WHERE account='{0}' AND password='{1}'",txtUsuario.Text.Trim(),txtPass.Text.Trim());
                 DataSet conectar = Biblioteca.Herramientas(validar);
+
+                //Obteniendo el id de la bd
+                codigo = conectar.Tables[0].Rows[0]["id_usuario"].ToString().Trim();
 
                 //Creacion de dos variables tratando como matrices
                 string cuenta = conectar.Tables[0].Rows[0]["account"].ToString().Trim();

@@ -32,9 +32,9 @@ namespace POSWFs
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Administrador));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.lblAdmin = new System.Windows.Forms.TextBox();
+            this.lblAdminUser = new System.Windows.Forms.TextBox();
+            this.lblAdminCodigo = new System.Windows.Forms.TextBox();
             this.btnPrincipal = new System.Windows.Forms.Button();
             this.btnAdmUsuarios = new System.Windows.Forms.Button();
             this.btnCambiarContra = new System.Windows.Forms.Button();
@@ -47,9 +47,10 @@ namespace POSWFs
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(514, 41);
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(420, 25);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(204, 198);
+            this.pictureBox1.Size = new System.Drawing.Size(325, 258);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -64,26 +65,26 @@ namespace POSWFs
             this.label1.TabIndex = 1;
             this.label1.Text = "Administrador:";
             // 
-            // textBox1
+            // lblAdmin
             // 
-            this.textBox1.Location = new System.Drawing.Point(207, 73);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(136, 20);
-            this.textBox1.TabIndex = 4;
+            this.lblAdmin.Location = new System.Drawing.Point(207, 73);
+            this.lblAdmin.Name = "lblAdmin";
+            this.lblAdmin.Size = new System.Drawing.Size(136, 20);
+            this.lblAdmin.TabIndex = 4;
             // 
-            // textBox2
+            // lblAdminUser
             // 
-            this.textBox2.Location = new System.Drawing.Point(207, 112);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(136, 20);
-            this.textBox2.TabIndex = 5;
+            this.lblAdminUser.Location = new System.Drawing.Point(207, 112);
+            this.lblAdminUser.Name = "lblAdminUser";
+            this.lblAdminUser.Size = new System.Drawing.Size(136, 20);
+            this.lblAdminUser.TabIndex = 5;
             // 
-            // textBox3
+            // lblAdminCodigo
             // 
-            this.textBox3.Location = new System.Drawing.Point(207, 156);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(136, 20);
-            this.textBox3.TabIndex = 6;
+            this.lblAdminCodigo.Location = new System.Drawing.Point(207, 156);
+            this.lblAdminCodigo.Name = "lblAdminCodigo";
+            this.lblAdminCodigo.Size = new System.Drawing.Size(136, 20);
+            this.lblAdminCodigo.TabIndex = 6;
             // 
             // btnPrincipal
             // 
@@ -171,9 +172,9 @@ namespace POSWFs
             this.Controls.Add(this.btnCambiarContra);
             this.Controls.Add(this.btnAdmUsuarios);
             this.Controls.Add(this.btnPrincipal);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.lblAdminCodigo);
+            this.Controls.Add(this.lblAdminUser);
+            this.Controls.Add(this.lblAdmin);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.MaximizeBox = false;
@@ -195,9 +196,9 @@ namespace POSWFs
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox lblAdmin;
+        private System.Windows.Forms.TextBox lblAdminUser;
+        private System.Windows.Forms.TextBox lblAdminCodigo;
         private System.Windows.Forms.Button btnPrincipal;
         private System.Windows.Forms.Button btnAdmUsuarios;
         private System.Windows.Forms.Button btnCambiarContra;

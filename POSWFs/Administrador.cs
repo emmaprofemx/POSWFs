@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using LibreriaDLL;
 namespace POSWFs
 {
     public partial class Administrador : Form
@@ -30,6 +31,18 @@ namespace POSWFs
 
         private void Administrador_Load(object sender, EventArgs e)
         {
+            //Trayendo la informacion almacenada
+            string consulta = "SELECT * FROM Usuarios WHERE id_usuario=" + Login.codigo;
+            //Estamos almacenando la informacion en cache de la consulta de arriba
+            DataSet data = Biblioteca.Herramientas(consulta);
+
+            lblAdmin.Text = data.Tables[0].Rows[0]["userrname"].ToString();
+            lblAdminUser.Text = data.Tables[0].Rows[0]["account"].ToString();
+            lblAdminCodigo.Text = data.Tables[0].Rows[0]["id_usuario"].ToString();
+
+            //Obteniendo la ruta de la imagen
+            string imagen = data.Tables[0].Rows[0]["imagen"].ToString();
+            pictureBox1.Image = Image.FromFile(imagen);
 
         }
     }

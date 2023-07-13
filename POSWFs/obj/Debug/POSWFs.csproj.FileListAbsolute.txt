@@ -11,3 +11,4 @@ D:\PDVCSHARP\POSWFs\POSWFs\obj\Debug\POSWFs.pdb
 D:\PDVCSHARP\POSWFs\POSWFs\bin\Debug\LibreriaDLL.dll
 D:\PDVCSHARP\POSWFs\POSWFs\bin\Debug\LibreriaDLL.pdb
 D:\PDVCSHARP\POSWFs\POSWFs\obj\Debug\POSWFs.csproj.CopyComplete
+D:\PDVCSHARP\POSWFs\POSWFs\obj\Debug\POSWFs.Usuario.resources

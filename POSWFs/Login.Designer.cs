@@ -1,7 +1,7 @@
 ﻿
 namespace POSWFs
 {
-    partial class Form1
+    partial class Login
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -29,6 +29,7 @@ namespace POSWFs
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.btnIniciar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -60,9 +61,10 @@ namespace POSWFs
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(138, 12);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(124, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(133, 111);
+            this.pictureBox1.Size = new System.Drawing.Size(166, 144);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
@@ -70,7 +72,7 @@ namespace POSWFs
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(53, 158);
+            this.label1.Location = new System.Drawing.Point(53, 179);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(82, 22);
             this.label1.TabIndex = 3;
@@ -81,7 +83,7 @@ namespace POSWFs
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(53, 205);
+            this.label2.Location = new System.Drawing.Point(53, 231);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(103, 22);
             this.label2.TabIndex = 4;
@@ -89,19 +91,19 @@ namespace POSWFs
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(163, 162);
+            this.txtUsuario.Location = new System.Drawing.Point(163, 183);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(157, 20);
             this.txtUsuario.TabIndex = 5;
             // 
             // txtPass
             // 
-            this.txtPass.Location = new System.Drawing.Point(163, 205);
+            this.txtPass.Location = new System.Drawing.Point(163, 235);
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(157, 20);
             this.txtPass.TabIndex = 6;
             // 
-            // Form1
+            // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -113,7 +115,7 @@ namespace POSWFs
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnIniciar);
-            this.Name = "Form1";
+            this.Name = "Login";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

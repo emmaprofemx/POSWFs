@@ -12,9 +12,9 @@ using System.Data.SqlClient;
 using LibreriaDLL;
 namespace POSWFs
 {
-    public partial class Form1 : Form
+    public partial class Login : Form
     {
-        public Form1()
+        public Login()
         {
             InitializeComponent();
         }
@@ -27,6 +27,7 @@ namespace POSWFs
                 string validar = string.Format("Select * FROM Usuarios WHERE account='{0}' AND password='{1}'",txtUsuario.Text.Trim(),txtPass.Text.Trim());
                 DataSet conectar = Biblioteca.Herramientas(validar);
 
+                //Creacion de dos variables tratando como matrices
                 string cuenta = conectar.Tables[0].Rows[0]["account"].ToString().Trim();
                 string contrasena = conectar.Tables[0].Rows[0]["password"].ToString().Trim();
 

@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 namespace POSWFs.Clases
 {
-    class CConexion
+   public class CConexion
     {
         SqlConnection conex = new SqlConnection();
         static string servidor = "localhost";

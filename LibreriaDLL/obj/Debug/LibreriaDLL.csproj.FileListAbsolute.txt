@@ -1,0 +1,6 @@
+D:\PDVCSHARP\POSWFs\LibreriaDLL\bin\Debug\LibreriaDLL.dll
+D:\PDVCSHARP\POSWFs\LibreriaDLL\bin\Debug\LibreriaDLL.pdb
+D:\PDVCSHARP\POSWFs\LibreriaDLL\obj\Debug\LibreriaDLL.csproj.AssemblyReference.cache
+D:\PDVCSHARP\POSWFs\LibreriaDLL\obj\Debug\LibreriaDLL.csproj.CoreCompileInputs.cache
+D:\PDVCSHARP\POSWFs\LibreriaDLL\obj\Debug\LibreriaDLL.dll
+D:\PDVCSHARP\POSWFs\LibreriaDLL\obj\Debug\LibreriaDLL.pdb

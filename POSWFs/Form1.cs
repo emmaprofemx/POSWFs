@@ -8,7 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-
+//Usando la libreria que creamos
+using LibreriaDLL;
 namespace POSWFs
 {
     public partial class Form1 : Form
@@ -20,19 +21,12 @@ namespace POSWFs
 
         private void button1_Click(object sender, EventArgs e)
         {
-            /* try
-             {
-                 //Creando conexion a la bd
-                 SqlConnection conexion = new SqlConnection("Data Source=localhost;Initial Catalog=Sistema;Integrated Security=True");
-                 conexion.Open();
-                 MessageBox.Show("Conexion Exitosa");
-             } catch(Exception error)
-             {
-                 MessageBox.Show("Ha ocurrido un error. Intente nuevamente " + error.Message);
-             }*/
+            //Biblioteca.Herramientas("Select * FROM Clientes where id = 1");
+        }
 
-            Clases.CConexion objetoConexion = new Clases.CConexion();
-            objetoConexion.establecerConexion();
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

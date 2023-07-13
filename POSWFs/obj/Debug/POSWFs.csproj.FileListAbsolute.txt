@@ -8,3 +8,6 @@ D:\PDVCSHARP\POSWFs\POSWFs\obj\Debug\POSWFs.csproj.GenerateResource.cache
 D:\PDVCSHARP\POSWFs\POSWFs\obj\Debug\POSWFs.csproj.CoreCompileInputs.cache
 D:\PDVCSHARP\POSWFs\POSWFs\obj\Debug\POSWFs.exe
 D:\PDVCSHARP\POSWFs\POSWFs\obj\Debug\POSWFs.pdb
+D:\PDVCSHARP\POSWFs\POSWFs\bin\Debug\LibreriaDLL.dll
+D:\PDVCSHARP\POSWFs\POSWFs\bin\Debug\LibreriaDLL.pdb
+D:\PDVCSHARP\POSWFs\POSWFs\obj\Debug\POSWFs.csproj.CopyComplete

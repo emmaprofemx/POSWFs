@@ -16,5 +16,11 @@ namespace POSWFs
         {
             InitializeComponent();
         }
+
+        private void Usuario_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            //Esta linea sirve para terminar la ejecucion del programa
+            Application.Exit();
+        }
     }
 }

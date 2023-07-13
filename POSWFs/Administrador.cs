@@ -21,5 +21,16 @@ namespace POSWFs
         {
 
         }
+
+        private void Administrador_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            //Esta linea sirve para terminar la ejecucion del programa
+            Application.Exit();
+        }
+
+        private void Administrador_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

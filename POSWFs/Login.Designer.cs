@@ -62,7 +62,7 @@ namespace POSWFs
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(124, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(141, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(166, 144);
             this.pictureBox1.TabIndex = 2;
@@ -71,6 +71,7 @@ namespace POSWFs
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(53, 179);
             this.label1.Name = "label1";
@@ -82,6 +83,7 @@ namespace POSWFs
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(53, 231);
             this.label2.Name = "label2";
@@ -107,7 +109,8 @@ namespace POSWFs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(418, 399);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(391, 399);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.label2);
@@ -115,8 +118,16 @@ namespace POSWFs
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnIniciar);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(407, 438);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(407, 438);
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Login_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Login_FormClosed);
+            this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

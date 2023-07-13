@@ -2,7 +2,6 @@ D:\PDVCSHARP\POSWFs\POSWFs\bin\Debug\POSWFs.exe.config
 D:\PDVCSHARP\POSWFs\POSWFs\bin\Debug\POSWFs.exe
 D:\PDVCSHARP\POSWFs\POSWFs\bin\Debug\POSWFs.pdb
 D:\PDVCSHARP\POSWFs\POSWFs\obj\Debug\POSWFs.csproj.AssemblyReference.cache
-D:\PDVCSHARP\POSWFs\POSWFs\obj\Debug\POSWFs.Form1.resources
 D:\PDVCSHARP\POSWFs\POSWFs\obj\Debug\POSWFs.Properties.Resources.resources
 D:\PDVCSHARP\POSWFs\POSWFs\obj\Debug\POSWFs.csproj.GenerateResource.cache
 D:\PDVCSHARP\POSWFs\POSWFs\obj\Debug\POSWFs.csproj.CoreCompileInputs.cache
@@ -12,3 +11,5 @@ D:\PDVCSHARP\POSWFs\POSWFs\bin\Debug\LibreriaDLL.dll
 D:\PDVCSHARP\POSWFs\POSWFs\bin\Debug\LibreriaDLL.pdb
 D:\PDVCSHARP\POSWFs\POSWFs\obj\Debug\POSWFs.csproj.CopyComplete
 D:\PDVCSHARP\POSWFs\POSWFs\obj\Debug\POSWFs.Usuario.resources
+D:\PDVCSHARP\POSWFs\POSWFs\obj\Debug\POSWFs.Administrador.resources
+D:\PDVCSHARP\POSWFs\POSWFs\obj\Debug\POSWFs.Login.resources

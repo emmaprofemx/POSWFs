@@ -32,8 +32,22 @@ namespace POSWFs
                 string contrasena = conectar.Tables[0].Rows[0]["password"].ToString().Trim();
 
                 if (cuenta == txtUsuario.Text.Trim() && contrasena == txtPass.Text.Trim())
-                {
-                    MessageBox.Show("Inicio de sesion correcto");
+                {//Si la cadena la cual esta en el campo validar == 1 (true) , entonces entramos a la ventana Administrador
+                    if (Convert.ToBoolean(conectar.Tables[0].Rows[0]["validar_admin"].ToString().Trim()) == true)
+                    {
+                        //Se escondera la ventana de login y abrira la de administrador
+                        Administrador admin = new Administrador();
+                        this.Hide();
+                        admin.Show();
+                    }
+                    else
+                    {
+                        Usuario user = new Usuario();
+                        this.Hide();
+                        user.Show();
+
+                    }
+                   // MessageBox.Show("Inicio de sesion correcto");
                 }
             }
             catch (Exception error)
@@ -45,6 +59,22 @@ namespace POSWFs
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Login_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+        }
+
+        private void Login_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            //Esta linea sirve para terminar la ejecucion del programa
+            Application.Exit();
         }
     }
 }

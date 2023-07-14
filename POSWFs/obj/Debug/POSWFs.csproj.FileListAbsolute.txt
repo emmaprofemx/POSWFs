@@ -1,7 +1,6 @@
 D:\PDVCSHARP\POSWFs\POSWFs\bin\Debug\POSWFs.exe.config
 D:\PDVCSHARP\POSWFs\POSWFs\bin\Debug\POSWFs.exe
 D:\PDVCSHARP\POSWFs\POSWFs\bin\Debug\POSWFs.pdb
-D:\PDVCSHARP\POSWFs\POSWFs\obj\Debug\POSWFs.csproj.AssemblyReference.cache
 D:\PDVCSHARP\POSWFs\POSWFs\obj\Debug\POSWFs.Properties.Resources.resources
 D:\PDVCSHARP\POSWFs\POSWFs\obj\Debug\POSWFs.csproj.GenerateResource.cache
 D:\PDVCSHARP\POSWFs\POSWFs\obj\Debug\POSWFs.csproj.CoreCompileInputs.cache

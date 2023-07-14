@@ -111,5 +111,18 @@ namespace POSWFs
             ManCli.MdiParent = this;
             ManCli.Show();
         }
+
+        private void productosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MantenimientoProductos ManProduc = new MantenimientoProductos();
+            //Llamando esta ventana en el apartado de mantenimimento
+            ManProduc.MdiParent = this;
+            ManProduc.Show();
+        }
+
+        private void ContenedorPrincipal_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -33,7 +33,7 @@ namespace POSWFs
             // 
             // btnMConsultar
             // 
-            this.btnMConsultar.Location = new System.Drawing.Point(122, 286);
+            this.btnMConsultar.Location = new System.Drawing.Point(131, 286);
             // 
             // btnMGuardar
             // 
@@ -45,7 +45,7 @@ namespace POSWFs
             // 
             // btnMEliminar
             // 
-            this.btnMEliminar.Location = new System.Drawing.Point(606, 286);
+            this.btnMEliminar.Location = new System.Drawing.Point(587, 286);
             // 
             // btnSalir
             // 

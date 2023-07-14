@@ -16,5 +16,25 @@ namespace POSWFs
         {
             InitializeComponent();
         }
+
+        private void btnMConsultar_Click(object sender, EventArgs e)
+        {
+            Consultar();
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            Guardar();
+        }
+
+        private void btnMNuevo_Click(object sender, EventArgs e)
+        {
+            Nuevo();
+        }
+
+        private void btnMEliminar_Click(object sender, EventArgs e)
+        {
+            Eliminar();
+        }
     }
 }

@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace POSWFs
 {
-    public partial class MantenimientoClientes : Mantenimiento
+    public partial class MantenimientoProductos : Mantenimiento
     {
-        public MantenimientoClientes()
+        public MantenimientoProductos()
         {
             InitializeComponent();
-        }
-
-        private void MantenimientoClientes_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

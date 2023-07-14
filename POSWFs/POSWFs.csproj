@@ -86,6 +86,18 @@
     <Compile Include="Mantenimiento.Designer.cs">
       <DependentUpon>Mantenimiento.cs</DependentUpon>
     </Compile>
+    <Compile Include="MantenimientoClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientoClientes.Designer.cs">
+      <DependentUpon>MantenimientoClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MantenimientoProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientoProductos.Designer.cs">
+      <DependentUpon>MantenimientoProductos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Procesos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +129,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimiento.resx">
       <DependentUpon>Mantenimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoClientes.resx">
+      <DependentUpon>MantenimientoClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoProductos.resx">
+      <DependentUpon>MantenimientoProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Procesos.resx">
       <DependentUpon>Procesos.cs</DependentUpon>

@@ -1,7 +1,7 @@
 ﻿
 namespace POSWFs
 {
-    partial class MantenimientoClientes
+    partial class MantenimientoProductos
     {
         /// <summary>
         /// Required designer variable.
@@ -31,34 +31,13 @@ namespace POSWFs
         {
             this.SuspendLayout();
             // 
-            // btnMConsultar
-            // 
-            this.btnMConsultar.Location = new System.Drawing.Point(56, 286);
-            // 
-            // btnMGuardar
-            // 
-            this.btnMGuardar.Location = new System.Drawing.Point(209, 286);
-            // 
-            // btnMNuevo
-            // 
-            this.btnMNuevo.Location = new System.Drawing.Point(372, 286);
-            // 
-            // btnMEliminar
-            // 
-            this.btnMEliminar.Location = new System.Drawing.Point(526, 286);
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.Location = new System.Drawing.Point(614, 405);
-            // 
-            // MantenimientoClientes
+            // MantenimientoProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(706, 444);
-            this.Name = "MantenimientoClientes";
-            this.Text = "MantenimientoClientes";
-            this.Load += new System.EventHandler(this.MantenimientoClientes_Load);
+            this.ClientSize = new System.Drawing.Size(773, 450);
+            this.Name = "MantenimientoProductos";
+            this.Text = "MantenimientoProductos";
             this.ResumeLayout(false);
 
         }

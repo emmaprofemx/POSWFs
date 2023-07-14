@@ -103,5 +103,13 @@ namespace POSWFs
                 childForm.Close();
             }
         }
+
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MantenimientoClientes ManCli = new MantenimientoClientes();
+            //Llamando esta ventana en el apartado de mantenimimento
+            ManCli.MdiParent = this;
+            ManCli.Show();
+        }
     }
 }

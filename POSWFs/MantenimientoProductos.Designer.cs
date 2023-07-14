@@ -31,6 +31,26 @@ namespace POSWFs
         {
             this.SuspendLayout();
             // 
+            // btnMConsultar
+            // 
+            this.btnMConsultar.Location = new System.Drawing.Point(122, 286);
+            // 
+            // btnMGuardar
+            // 
+            this.btnMGuardar.Location = new System.Drawing.Point(275, 286);
+            // 
+            // btnMNuevo
+            // 
+            this.btnMNuevo.Location = new System.Drawing.Point(430, 286);
+            // 
+            // btnMEliminar
+            // 
+            this.btnMEliminar.Location = new System.Drawing.Point(606, 286);
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Location = new System.Drawing.Point(631, 385);
+            // 
             // MantenimientoProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);

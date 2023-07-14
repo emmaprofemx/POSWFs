@@ -29,7 +29,6 @@ namespace POSWFs
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Usuario));
             this.label1 = new System.Windows.Forms.Label();
             this.lblUsuarioNombre = new System.Windows.Forms.TextBox();
             this.lblUsuario = new System.Windows.Forms.TextBox();
@@ -40,10 +39,12 @@ namespace POSWFs
             this.btnPrincipal = new System.Windows.Forms.Button();
             this.btnAdmUsuarios = new System.Windows.Forms.Button();
             this.btnCambiarContra = new System.Windows.Forms.Button();
-            this.btnCerrarSesion = new System.Windows.Forms.Button();
-            this.btnSalIR = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Location = new System.Drawing.Point(511, 362);
             // 
             // label1
             // 
@@ -141,34 +142,11 @@ namespace POSWFs
             this.btnCambiarContra.Text = "Cambiar contraseña";
             this.btnCambiarContra.UseVisualStyleBackColor = true;
             // 
-            // btnCerrarSesion
-            // 
-            this.btnCerrarSesion.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrarSesion.Location = new System.Drawing.Point(244, 307);
-            this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(145, 43);
-            this.btnCerrarSesion.TabIndex = 17;
-            this.btnCerrarSesion.Text = "Cerrar sesión";
-            this.btnCerrarSesion.UseVisualStyleBackColor = true;
-            // 
-            // btnSalIR
-            // 
-            this.btnSalIR.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalIR.Location = new System.Drawing.Point(494, 397);
-            this.btnSalIR.Name = "btnSalIR";
-            this.btnSalIR.Size = new System.Drawing.Size(110, 35);
-            this.btnSalIR.TabIndex = 18;
-            this.btnSalIR.Text = "Salir";
-            this.btnSalIR.UseVisualStyleBackColor = true;
-            // 
             // Usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(660, 444);
-            this.Controls.Add(this.btnSalIR);
-            this.Controls.Add(this.btnCerrarSesion);
             this.Controls.Add(this.btnCambiarContra);
             this.Controls.Add(this.btnAdmUsuarios);
             this.Controls.Add(this.btnPrincipal);
@@ -188,6 +166,17 @@ namespace POSWFs
             this.Text = "Usuario";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Usuario_FormClosed);
             this.Load += new System.EventHandler(this.Usuario_Load);
+            this.Controls.SetChildIndex(this.label1, 0);
+            this.Controls.SetChildIndex(this.lblUsuarioNombre, 0);
+            this.Controls.SetChildIndex(this.lblUsuario, 0);
+            this.Controls.SetChildIndex(this.lblUsuarioCodigo, 0);
+            this.Controls.SetChildIndex(this.pictureBox1, 0);
+            this.Controls.SetChildIndex(this.label2, 0);
+            this.Controls.SetChildIndex(this.label3, 0);
+            this.Controls.SetChildIndex(this.btnPrincipal, 0);
+            this.Controls.SetChildIndex(this.btnAdmUsuarios, 0);
+            this.Controls.SetChildIndex(this.btnCambiarContra, 0);
+            this.Controls.SetChildIndex(this.btnSalir, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -206,7 +195,5 @@ namespace POSWFs
         private System.Windows.Forms.Button btnPrincipal;
         private System.Windows.Forms.Button btnAdmUsuarios;
         private System.Windows.Forms.Button btnCambiarContra;
-        private System.Windows.Forms.Button btnCerrarSesion;
-        private System.Windows.Forms.Button btnSalIR;
     }
 }

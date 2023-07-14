@@ -29,7 +29,6 @@ namespace POSWFs
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Administrador));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblAdmin = new System.Windows.Forms.TextBox();
@@ -39,11 +38,14 @@ namespace POSWFs
             this.btnAdmUsuarios = new System.Windows.Forms.Button();
             this.btnCambiarContra = new System.Windows.Forms.Button();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
-            this.btnSalIR = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Location = new System.Drawing.Point(505, 392);
             // 
             // pictureBox1
             // 
@@ -71,6 +73,7 @@ namespace POSWFs
             this.lblAdmin.Name = "lblAdmin";
             this.lblAdmin.Size = new System.Drawing.Size(136, 20);
             this.lblAdmin.TabIndex = 4;
+            this.lblAdmin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblAdminUser
             // 
@@ -78,6 +81,7 @@ namespace POSWFs
             this.lblAdminUser.Name = "lblAdminUser";
             this.lblAdminUser.Size = new System.Drawing.Size(136, 20);
             this.lblAdminUser.TabIndex = 5;
+            this.lblAdminUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblAdminCodigo
             // 
@@ -85,6 +89,7 @@ namespace POSWFs
             this.lblAdminCodigo.Name = "lblAdminCodigo";
             this.lblAdminCodigo.Size = new System.Drawing.Size(136, 20);
             this.lblAdminCodigo.TabIndex = 6;
+            this.lblAdminCodigo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnPrincipal
             // 
@@ -126,16 +131,6 @@ namespace POSWFs
             this.btnCerrarSesion.Text = "Cerrar sesión";
             this.btnCerrarSesion.UseVisualStyleBackColor = true;
             // 
-            // btnSalIR
-            // 
-            this.btnSalIR.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalIR.Location = new System.Drawing.Point(437, 440);
-            this.btnSalIR.Name = "btnSalIR";
-            this.btnSalIR.Size = new System.Drawing.Size(110, 35);
-            this.btnSalIR.TabIndex = 11;
-            this.btnSalIR.Text = "Salir";
-            this.btnSalIR.UseVisualStyleBackColor = true;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -163,11 +158,9 @@ namespace POSWFs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(757, 499);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.btnSalIR);
             this.Controls.Add(this.btnCerrarSesion);
             this.Controls.Add(this.btnCambiarContra);
             this.Controls.Add(this.btnAdmUsuarios);
@@ -186,6 +179,18 @@ namespace POSWFs
             this.Text = "Administrador";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Administrador_FormClosed);
             this.Load += new System.EventHandler(this.Administrador_Load);
+            this.Controls.SetChildIndex(this.pictureBox1, 0);
+            this.Controls.SetChildIndex(this.label1, 0);
+            this.Controls.SetChildIndex(this.lblAdmin, 0);
+            this.Controls.SetChildIndex(this.lblAdminUser, 0);
+            this.Controls.SetChildIndex(this.lblAdminCodigo, 0);
+            this.Controls.SetChildIndex(this.btnPrincipal, 0);
+            this.Controls.SetChildIndex(this.btnAdmUsuarios, 0);
+            this.Controls.SetChildIndex(this.btnCambiarContra, 0);
+            this.Controls.SetChildIndex(this.btnCerrarSesion, 0);
+            this.Controls.SetChildIndex(this.label4, 0);
+            this.Controls.SetChildIndex(this.label5, 0);
+            this.Controls.SetChildIndex(this.btnSalir, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -203,7 +208,6 @@ namespace POSWFs
         private System.Windows.Forms.Button btnAdmUsuarios;
         private System.Windows.Forms.Button btnCambiarContra;
         private System.Windows.Forms.Button btnCerrarSesion;
-        private System.Windows.Forms.Button btnSalIR;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
     }

@@ -12,7 +12,7 @@ using System.Data.SqlClient;
 using LibreriaDLL;
 namespace POSWFs
 {
-    public partial class Login : Form
+    public partial class Login : FormBase
     {
         public Login()
         {

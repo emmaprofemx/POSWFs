@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using LibreriaDLL;
 namespace POSWFs
 {
-    public partial class Usuario : Form
+    public partial class Usuario : FormBase
     {
         public Usuario()
         {

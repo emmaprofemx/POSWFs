@@ -31,7 +31,6 @@ namespace POSWFs
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.btnIniciar = new System.Windows.Forms.Button();
-            this.btnSalir = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -40,9 +39,13 @@ namespace POSWFs
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
+            // btnSalir
+            // 
+            this.btnSalir.Location = new System.Drawing.Point(266, 360);
+            // 
             // btnIniciar
             // 
-            this.btnIniciar.Location = new System.Drawing.Point(57, 309);
+            this.btnIniciar.Location = new System.Drawing.Point(152, 279);
             this.btnIniciar.Name = "btnIniciar";
             this.btnIniciar.Size = new System.Drawing.Size(113, 43);
             this.btnIniciar.TabIndex = 0;
@@ -50,17 +53,10 @@ namespace POSWFs
             this.btnIniciar.UseVisualStyleBackColor = true;
             this.btnIniciar.Click += new System.EventHandler(this.button1_Click);
             // 
-            // btnSalir
-            // 
-            this.btnSalir.Location = new System.Drawing.Point(207, 309);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(113, 43);
-            this.btnSalir.TabIndex = 1;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
-            // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(111, 12);
@@ -98,16 +94,20 @@ namespace POSWFs
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(157, 20);
             this.txtUsuario.TabIndex = 5;
+            this.txtUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtPass
             // 
             this.txtPass.Location = new System.Drawing.Point(163, 235);
             this.txtPass.Name = "txtPass";
+            this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(157, 20);
             this.txtPass.TabIndex = 6;
+            this.txtPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Login
             // 
+            this.AcceptButton = this.btnIniciar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
@@ -117,7 +117,6 @@ namespace POSWFs
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnIniciar);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(407, 438);
@@ -129,6 +128,13 @@ namespace POSWFs
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Login_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Login_FormClosed);
             this.Load += new System.EventHandler(this.Login_Load);
+            this.Controls.SetChildIndex(this.btnIniciar, 0);
+            this.Controls.SetChildIndex(this.pictureBox1, 0);
+            this.Controls.SetChildIndex(this.label1, 0);
+            this.Controls.SetChildIndex(this.label2, 0);
+            this.Controls.SetChildIndex(this.txtUsuario, 0);
+            this.Controls.SetChildIndex(this.txtPass, 0);
+            this.Controls.SetChildIndex(this.btnSalir, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -138,7 +144,6 @@ namespace POSWFs
         #endregion
 
         private System.Windows.Forms.Button btnIniciar;
-        private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

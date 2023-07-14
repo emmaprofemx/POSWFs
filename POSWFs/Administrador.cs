@@ -11,7 +11,7 @@ using System.Windows.Forms;
 using LibreriaDLL;
 namespace POSWFs
 {
-    public partial class Administrador : Form
+    public partial class Administrador : FormBase
     {
         public Administrador()
         {

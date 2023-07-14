@@ -1,7 +1,7 @@
 ﻿
 namespace POSWFs
 {
-    partial class Consultas
+    partial class Procesos
     {
         /// <summary>
         /// Required designer variable.
@@ -29,21 +29,10 @@ namespace POSWFs
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.Location = new System.Drawing.Point(659, 379);
-            // 
-            // Consultas
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "Consultas";
-            this.Text = "Consultas";
-            this.ResumeLayout(false);
-
+            this.Text = "Procesos";
         }
 
         #endregion

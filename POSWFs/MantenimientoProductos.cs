@@ -56,18 +56,26 @@ namespace POSWFs
 
         public override void Eliminar()
         {
-            //Ejecutando el procedimiento almacenado sp_ActualizarArticulos
-            /*En este apartado , se manda a llamar el procedimiento almacenado sp_ActualizarArticulos
-             * usando arrays dentro de las comillas dobles para pasarle como parametros , los datos
-             * que se vayan ingresando en los txt de la ventana Mantenimiento productos.
-             * 
-             * Usamos nuestra liberia la cual nos ayudara a realizar la peticion a la BD , osea
-             * insertamos los datos , despues con la ayuda de la liberia esta se conecta a la BD.
-             * Si todo sale bien , se despliega un MessageBox.Show
-             * 
-             * Tenemos que darle compilar al proyecto para que se apliquen los cambios.
-             */
-            string eliminar = string.Format("EXEC sp_EliminarClientes '{0}'" , txtId_Producto.Text.Trim());
+            try
+            {
+                //Ejecutando el procedimiento almacenado sp_EliminarProductos
+                /*Se manda a llamar el procedimiento almacenado sp_EliminarProductos
+                 * usando una posicion , la cual hace referencia al Id que estaremos ingresando
+                 * en el txt , el cual se lee y se manda a la sentencia SQL donde eliminara el 
+                 * producto el cual tenga el id que se ingreso.
+                 * 
+                 * Usamos nuestra liberia la cual nos ayudara a realizar la peticion a la BD.
+                 * Tenemos que darle compilar al proyecto para que se apliquen los cambios.
+                 */
+                string eliminar = string.Format("EXEC sp_EliminarProductos '{0}'", txtId_Producto.Text.Trim());
+                Biblioteca.Herramientas(eliminar);
+                MessageBox.Show("¡Producto eliminado correctamente!");
+            }catch(Exception error)
+            {
+                MessageBox.Show("Ha ocurrido un error: " + error);
+            }
+           
+        
         }
 
     }

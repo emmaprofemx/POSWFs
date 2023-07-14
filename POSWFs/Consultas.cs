@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace POSWFs
 {
-    public partial class Mantenimiento : FormBase
+    public partial class Consultas : FormBase
     {
-        public Mantenimiento()
+        public Consultas()
         {
             InitializeComponent();
         }

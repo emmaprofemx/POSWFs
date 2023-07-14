@@ -14,3 +14,4 @@ D:\PDVCSHARP\POSWFs\POSWFs\obj\Debug\POSWFs.Usuario.resources
 D:\PDVCSHARP\POSWFs\POSWFs\obj\Debug\POSWFs.Administrador.resources
 D:\PDVCSHARP\POSWFs\POSWFs\obj\Debug\POSWFs.Login.resources
 D:\PDVCSHARP\POSWFs\POSWFs\obj\Debug\POSWFs.FormBase.resources
+D:\PDVCSHARP\POSWFs\POSWFs\obj\Debug\POSWFs.Mantenimiento.resources

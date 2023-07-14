@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using LibreriaDLL;
 namespace POSWFs
 {
     public partial class MantenimientoProductos : Mantenimiento
@@ -21,5 +21,54 @@ namespace POSWFs
         {
 
         }
+
+        private void MantenimientoProductos_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        public override Boolean Guardar()
+        {
+            try
+            {
+                //Ejecutando el procedimiento almacenado sp_ActualizarArticulos
+                /*En este apartado , se manda a llamar el procedimiento almacenado sp_ActualizarArticulos
+                 * usando arrays dentro de las comillas dobles para pasarle como parametros , los datos
+                 * que se vayan ingresando en los txt de la ventana Mantenimiento productos.
+                 * 
+                 * Usamos nuestra liberia la cual nos ayudara a realizar la peticion a la BD , osea
+                 * insertamos los datos , despues con la ayuda de la liberia esta se conecta a la BD.
+                 * Si todo sale bien , se despliega un MessageBox.Show
+                 * 
+                 * Tenemos que darle compilar al proyecto para que se apliquen los cambios.
+                 */
+                string insertar = string.Format("EXEC sp_ActualizarArticulos '{0}','{1}','{2}'" , txtId_Producto.Text.Trim() , txtDescripcion.Text.Trim() , txtPrecio.Text.Trim());
+                Biblioteca.Herramientas(insertar);
+                MessageBox.Show("¡Producto guardado correctamente!");
+                return true;
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Ha ocurrido un error: " + error);
+                return false;
+            }
+        }
+
+        public override void Eliminar()
+        {
+            //Ejecutando el procedimiento almacenado sp_ActualizarArticulos
+            /*En este apartado , se manda a llamar el procedimiento almacenado sp_ActualizarArticulos
+             * usando arrays dentro de las comillas dobles para pasarle como parametros , los datos
+             * que se vayan ingresando en los txt de la ventana Mantenimiento productos.
+             * 
+             * Usamos nuestra liberia la cual nos ayudara a realizar la peticion a la BD , osea
+             * insertamos los datos , despues con la ayuda de la liberia esta se conecta a la BD.
+             * Si todo sale bien , se despliega un MessageBox.Show
+             * 
+             * Tenemos que darle compilar al proyecto para que se apliquen los cambios.
+             */
+            string eliminar = string.Format("EXEC sp_EliminarClientes '{0}'" , txtId_Producto.Text.Trim());
+        }
+
     }
 }

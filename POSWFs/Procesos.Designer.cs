@@ -34,6 +34,7 @@ namespace POSWFs
             // btnSalir
             // 
             this.btnSalir.Location = new System.Drawing.Point(676, 401);
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // Procesos
             // 
@@ -42,6 +43,7 @@ namespace POSWFs
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Name = "Procesos";
             this.Text = "Procesos";
+            this.Load += new System.EventHandler(this.Procesos_Load);
             this.ResumeLayout(false);
 
         }

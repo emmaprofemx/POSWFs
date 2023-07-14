@@ -16,5 +16,15 @@ namespace POSWFs
         {
             InitializeComponent();
         }
+
+        private void Procesos_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

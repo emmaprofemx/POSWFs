@@ -30,9 +30,9 @@ namespace POSWFs
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MantenimientoProductos));
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtId_Producto = new System.Windows.Forms.TextBox();
+            this.txtPrecio = new System.Windows.Forms.TextBox();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -61,27 +61,27 @@ namespace POSWFs
             // 
             this.btnSalir.Location = new System.Drawing.Point(507, 381);
             // 
-            // textBox1
+            // txtId_Producto
             // 
-            this.textBox1.Location = new System.Drawing.Point(184, 47);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(192, 20);
-            this.textBox1.TabIndex = 5;
+            this.txtId_Producto.Location = new System.Drawing.Point(184, 47);
+            this.txtId_Producto.Name = "txtId_Producto";
+            this.txtId_Producto.Size = new System.Drawing.Size(192, 20);
+            this.txtId_Producto.TabIndex = 5;
             // 
-            // textBox2
+            // txtPrecio
             // 
-            this.textBox2.Location = new System.Drawing.Point(184, 207);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(192, 20);
-            this.textBox2.TabIndex = 6;
+            this.txtPrecio.Location = new System.Drawing.Point(184, 207);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(192, 20);
+            this.txtPrecio.TabIndex = 6;
             // 
-            // textBox3
+            // txtDescripcion
             // 
-            this.textBox3.Location = new System.Drawing.Point(184, 90);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(192, 97);
-            this.textBox3.TabIndex = 7;
+            this.txtDescripcion.Location = new System.Drawing.Point(184, 90);
+            this.txtDescripcion.Multiline = true;
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(192, 97);
+            this.txtDescripcion.TabIndex = 7;
             // 
             // label1
             // 
@@ -151,19 +151,20 @@ namespace POSWFs
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtDescripcion);
+            this.Controls.Add(this.txtPrecio);
+            this.Controls.Add(this.txtId_Producto);
             this.Name = "MantenimientoProductos";
             this.Text = "MantenimientoProductos";
+            this.Load += new System.EventHandler(this.MantenimientoProductos_Load);
             this.Controls.SetChildIndex(this.btnSalir, 0);
             this.Controls.SetChildIndex(this.btnMConsultar, 0);
             this.Controls.SetChildIndex(this.btnMGuardar, 0);
             this.Controls.SetChildIndex(this.btnMNuevo, 0);
             this.Controls.SetChildIndex(this.btnMEliminar, 0);
-            this.Controls.SetChildIndex(this.textBox1, 0);
-            this.Controls.SetChildIndex(this.textBox2, 0);
-            this.Controls.SetChildIndex(this.textBox3, 0);
+            this.Controls.SetChildIndex(this.txtId_Producto, 0);
+            this.Controls.SetChildIndex(this.txtPrecio, 0);
+            this.Controls.SetChildIndex(this.txtDescripcion, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.label3, 0);
@@ -177,9 +178,9 @@ namespace POSWFs
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtId_Producto;
+        private System.Windows.Forms.TextBox txtPrecio;
+        private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

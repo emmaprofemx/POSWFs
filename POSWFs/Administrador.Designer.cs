@@ -46,6 +46,7 @@ namespace POSWFs
             // btnSalir
             // 
             this.btnSalir.Location = new System.Drawing.Point(505, 392);
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // pictureBox1
             // 

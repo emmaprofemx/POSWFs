@@ -57,5 +57,10 @@ namespace POSWFs
 
 
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

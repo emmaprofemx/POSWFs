@@ -45,5 +45,17 @@ namespace POSWFs
             pictureBox1.Image = Image.FromFile(imagen);
 
         }
+
+        private void btnPrincipal_Click(object sender, EventArgs e)
+        {
+            //Codigo para pasarnos al Contenedor Principal del Sistema
+            ContenedorPrincipal con_principal = new ContenedorPrincipal();
+            //Ocultando administrador
+            this.Hide();
+            con_principal.Show();
+
+
+
+        }
     }
 }

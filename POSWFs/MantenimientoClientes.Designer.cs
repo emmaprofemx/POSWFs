@@ -1,7 +1,7 @@
 ﻿
 namespace POSWFs
 {
-    partial class Procesos
+    partial class MantenimientoClientes
     {
         /// <summary>
         /// Required designer variable.
@@ -31,17 +31,14 @@ namespace POSWFs
         {
             this.SuspendLayout();
             // 
-            // btnSalir
-            // 
-            this.btnSalir.Location = new System.Drawing.Point(676, 401);
-            // 
-            // Procesos
+            // MantenimientoClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "Procesos";
-            this.Text = "Procesos";
+            this.Name = "MantenimientoClientes";
+            this.Text = "MantenimientoClientes";
+            this.Load += new System.EventHandler(this.MantenimientoClientes_Load);
             this.ResumeLayout(false);
 
         }

@@ -121,6 +121,7 @@ namespace POSWFs
             this.btnPrincipal.TabIndex = 14;
             this.btnPrincipal.Text = "Principal";
             this.btnPrincipal.UseVisualStyleBackColor = true;
+            this.btnPrincipal.Click += new System.EventHandler(this.btnPrincipal_Click);
             // 
             // btnAdmUsuarios
             // 

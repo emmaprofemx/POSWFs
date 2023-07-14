@@ -16,3 +16,5 @@ D:\PDVCSHARP\POSWFs\POSWFs\obj\Debug\POSWFs.Login.resources
 D:\PDVCSHARP\POSWFs\POSWFs\obj\Debug\POSWFs.FormBase.resources
 D:\PDVCSHARP\POSWFs\POSWFs\obj\Debug\POSWFs.Mantenimiento.resources
 D:\PDVCSHARP\POSWFs\POSWFs\obj\Debug\POSWFs.Consultas.resources
+D:\PDVCSHARP\POSWFs\POSWFs\obj\Debug\POSWFs.ContenedorPrincipal.resources
+D:\PDVCSHARP\POSWFs\POSWFs\obj\Debug\POSWFs.Procesos.resources

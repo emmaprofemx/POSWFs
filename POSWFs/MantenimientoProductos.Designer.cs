@@ -53,6 +53,7 @@ namespace POSWFs
             // btnMNuevo
             // 
             this.btnMNuevo.Location = new System.Drawing.Point(333, 286);
+            this.btnMNuevo.Click += new System.EventHandler(this.btnMNuevo_Click);
             // 
             // btnMEliminar
             // 

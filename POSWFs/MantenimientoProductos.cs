@@ -91,5 +91,14 @@ namespace POSWFs
             //Cuando el usuario vuelva a escribir , el errorProvider se limpiara
             errorProvider1.Clear();
         }
+
+        private void btnMNuevo_Click(object sender, EventArgs e)
+        {
+            //Estableciendo que los cuadros esten en blanco.
+                txtId_Producto.Text = "";
+                txtDescripcion.Text = "";
+                txtPrecio.Text = "";
+            
+        }
     }
 }

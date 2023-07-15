@@ -103,5 +103,13 @@ namespace POSWFs
         {
 
         }
+
+        private void btnMNuevo_Click(object sender, EventArgs e)
+        {
+            //Estableciendo que los cuadros esten en blanco.
+            txtId_Cliente.Text = "";
+            txtNombre_Cliente.Text = "";
+            txtApellido_Cliente.Text = "";
+        }
     }
 }

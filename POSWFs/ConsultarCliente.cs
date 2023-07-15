@@ -35,6 +35,7 @@ namespace POSWFs
 
         private void ConsultarCliente_Load(object sender, EventArgs e)
         {
+            //Obtenemos la informacion de la base de datos , de nuestra tabla Clientes
             dataGridView1.DataSource = MostrarInfoDG("Clientes").Tables[0];
         }
     }

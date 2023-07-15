@@ -45,6 +45,7 @@ namespace POSWFs
             // btnMConsultar
             // 
             this.btnMConsultar.Location = new System.Drawing.Point(43, 286);
+            this.btnMConsultar.Click += new System.EventHandler(this.btnMConsultar_Click);
             // 
             // btnMGuardar
             // 
@@ -163,7 +164,10 @@ namespace POSWFs
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.MaximumSize = new System.Drawing.Size(709, 486);
+            this.MinimumSize = new System.Drawing.Size(709, 486);
             this.Name = "MantenimientoProductos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MantenimientoProductos";
             this.Load += new System.EventHandler(this.MantenimientoProductos_Load);
             this.Controls.SetChildIndex(this.btnSalir, 0);

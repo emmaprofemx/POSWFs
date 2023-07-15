@@ -111,5 +111,12 @@ namespace POSWFs
             txtNombre_Cliente.Text = "";
             txtApellido_Cliente.Text = "";
         }
+
+        private void btnMConsultar_Click(object sender, EventArgs e)
+        {
+            ConsultarCliente consulCli = new ConsultarCliente();
+           // consulCli.MdiParent = this;
+            consulCli.Show();
+        }
     }
 }

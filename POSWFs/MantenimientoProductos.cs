@@ -100,5 +100,12 @@ namespace POSWFs
                 txtPrecio.Text = "";
             
         }
+
+        private void btnMConsultar_Click(object sender, EventArgs e)
+        {
+            ConsultarProductos consulPro = new ConsultarProductos();
+           // consulPro.MdiParent = this;
+            consulPro.Show();
+        }
     }
 }

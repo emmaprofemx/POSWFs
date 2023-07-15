@@ -45,6 +45,7 @@ namespace POSWFs
             // btnMConsultar
             // 
             this.btnMConsultar.Location = new System.Drawing.Point(83, 286);
+            this.btnMConsultar.Click += new System.EventHandler(this.btnMConsultar_Click);
             // 
             // btnMGuardar
             // 

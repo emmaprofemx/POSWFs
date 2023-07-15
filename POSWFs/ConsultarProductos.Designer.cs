@@ -41,6 +41,7 @@ namespace POSWFs
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Name = "ConsultarProductos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ConsultarProductos";
             this.Load += new System.EventHandler(this.ConsultarProductos_Load);
             this.ResumeLayout(false);

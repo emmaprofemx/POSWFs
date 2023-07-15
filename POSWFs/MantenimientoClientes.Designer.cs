@@ -34,10 +34,10 @@ namespace POSWFs
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtNombre_Cliente = new System.Windows.Forms.TextBox();
-            this.txtApellido_Cliente = new System.Windows.Forms.TextBox();
-            this.txtId_Cliente = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtId_Cliente = new LibreriaDLL.ErrortxBox();
+            this.txtNombre_Cliente = new LibreriaDLL.ErrortxBox();
+            this.txtApellido_Cliente = new LibreriaDLL.ErrortxBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,7 +79,7 @@ namespace POSWFs
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(77, 201);
+            this.label3.Location = new System.Drawing.Point(79, 197);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(93, 24);
             this.label3.TabIndex = 18;
@@ -107,27 +107,6 @@ namespace POSWFs
             this.label1.TabIndex = 16;
             this.label1.Text = "Id Cliente:";
             // 
-            // txtNombre_Cliente
-            // 
-            this.txtNombre_Cliente.Location = new System.Drawing.Point(192, 145);
-            this.txtNombre_Cliente.Name = "txtNombre_Cliente";
-            this.txtNombre_Cliente.Size = new System.Drawing.Size(192, 20);
-            this.txtNombre_Cliente.TabIndex = 15;
-            // 
-            // txtApellido_Cliente
-            // 
-            this.txtApellido_Cliente.Location = new System.Drawing.Point(192, 201);
-            this.txtApellido_Cliente.Name = "txtApellido_Cliente";
-            this.txtApellido_Cliente.Size = new System.Drawing.Size(192, 20);
-            this.txtApellido_Cliente.TabIndex = 14;
-            // 
-            // txtId_Cliente
-            // 
-            this.txtId_Cliente.Location = new System.Drawing.Point(192, 97);
-            this.txtId_Cliente.Name = "txtId_Cliente";
-            this.txtId_Cliente.Size = new System.Drawing.Size(192, 20);
-            this.txtId_Cliente.TabIndex = 13;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
@@ -139,19 +118,43 @@ namespace POSWFs
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
             // 
+            // txtId_Cliente
+            // 
+            this.txtId_Cliente.Location = new System.Drawing.Point(192, 96);
+            this.txtId_Cliente.Name = "txtId_Cliente";
+            this.txtId_Cliente.Size = new System.Drawing.Size(192, 20);
+            this.txtId_Cliente.TabIndex = 21;
+            this.txtId_Cliente.Validar = true;
+            // 
+            // txtNombre_Cliente
+            // 
+            this.txtNombre_Cliente.Location = new System.Drawing.Point(192, 146);
+            this.txtNombre_Cliente.Name = "txtNombre_Cliente";
+            this.txtNombre_Cliente.Size = new System.Drawing.Size(192, 20);
+            this.txtNombre_Cliente.TabIndex = 22;
+            this.txtNombre_Cliente.Validar = true;
+            // 
+            // txtApellido_Cliente
+            // 
+            this.txtApellido_Cliente.Location = new System.Drawing.Point(192, 201);
+            this.txtApellido_Cliente.Name = "txtApellido_Cliente";
+            this.txtApellido_Cliente.Size = new System.Drawing.Size(192, 20);
+            this.txtApellido_Cliente.TabIndex = 23;
+            this.txtApellido_Cliente.Validar = true;
+            // 
             // MantenimientoClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(687, 408);
+            this.Controls.Add(this.txtApellido_Cliente);
+            this.Controls.Add(this.txtNombre_Cliente);
+            this.Controls.Add(this.txtId_Cliente);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtNombre_Cliente);
-            this.Controls.Add(this.txtApellido_Cliente);
-            this.Controls.Add(this.txtId_Cliente);
             this.Name = "MantenimientoClientes";
             this.Text = "MantenimientoClientes";
             this.Load += new System.EventHandler(this.MantenimientoClientes_Load);
@@ -160,14 +163,14 @@ namespace POSWFs
             this.Controls.SetChildIndex(this.btnMGuardar, 0);
             this.Controls.SetChildIndex(this.btnMNuevo, 0);
             this.Controls.SetChildIndex(this.btnMEliminar, 0);
-            this.Controls.SetChildIndex(this.txtId_Cliente, 0);
-            this.Controls.SetChildIndex(this.txtApellido_Cliente, 0);
-            this.Controls.SetChildIndex(this.txtNombre_Cliente, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.label3, 0);
             this.Controls.SetChildIndex(this.label4, 0);
             this.Controls.SetChildIndex(this.pictureBox1, 0);
+            this.Controls.SetChildIndex(this.txtId_Cliente, 0);
+            this.Controls.SetChildIndex(this.txtNombre_Cliente, 0);
+            this.Controls.SetChildIndex(this.txtApellido_Cliente, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -180,9 +183,9 @@ namespace POSWFs
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtNombre_Cliente;
-        private System.Windows.Forms.TextBox txtApellido_Cliente;
-        private System.Windows.Forms.TextBox txtId_Cliente;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private LibreriaDLL.ErrortxBox txtId_Cliente;
+        private LibreriaDLL.ErrortxBox txtNombre_Cliente;
+        private LibreriaDLL.ErrortxBox txtApellido_Cliente;
     }
 }

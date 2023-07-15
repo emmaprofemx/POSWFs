@@ -35,9 +35,9 @@ namespace POSWFs
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtId_Cliente = new LibreriaDLL.ErrortxBox();
-            this.txtNombre_Cliente = new LibreriaDLL.ErrortxBox();
             this.txtApellido_Cliente = new LibreriaDLL.ErrortxBox();
+            this.txtNombre_Cliente = new LibreriaDLL.ErrortxBox();
+            this.txtId_Cliente = new LibreriaDLL.ErrortxBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -119,14 +119,14 @@ namespace POSWFs
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
             // 
-            // txtId_Cliente
+            // txtApellido_Cliente
             // 
-            this.txtId_Cliente.Location = new System.Drawing.Point(192, 96);
-            this.txtId_Cliente.Name = "txtId_Cliente";
-            this.txtId_Cliente.Size = new System.Drawing.Size(192, 20);
-            this.txtId_Cliente.TabIndex = 21;
-            this.txtId_Cliente.Validar = true;
-            this.txtId_Cliente.TextChanged += new System.EventHandler(this.txtId_Cliente_TextChanged);
+            this.txtApellido_Cliente.Location = new System.Drawing.Point(192, 201);
+            this.txtApellido_Cliente.Name = "txtApellido_Cliente";
+            this.txtApellido_Cliente.Size = new System.Drawing.Size(192, 20);
+            this.txtApellido_Cliente.TabIndex = 23;
+            this.txtApellido_Cliente.Validar = true;
+            this.txtApellido_Cliente.ValidarNumeros = false;
             // 
             // txtNombre_Cliente
             // 
@@ -135,14 +135,17 @@ namespace POSWFs
             this.txtNombre_Cliente.Size = new System.Drawing.Size(192, 20);
             this.txtNombre_Cliente.TabIndex = 22;
             this.txtNombre_Cliente.Validar = true;
+            this.txtNombre_Cliente.ValidarNumeros = false;
             // 
-            // txtApellido_Cliente
+            // txtId_Cliente
             // 
-            this.txtApellido_Cliente.Location = new System.Drawing.Point(192, 201);
-            this.txtApellido_Cliente.Name = "txtApellido_Cliente";
-            this.txtApellido_Cliente.Size = new System.Drawing.Size(192, 20);
-            this.txtApellido_Cliente.TabIndex = 23;
-            this.txtApellido_Cliente.Validar = true;
+            this.txtId_Cliente.Location = new System.Drawing.Point(192, 96);
+            this.txtId_Cliente.Name = "txtId_Cliente";
+            this.txtId_Cliente.Size = new System.Drawing.Size(192, 20);
+            this.txtId_Cliente.TabIndex = 21;
+            this.txtId_Cliente.Validar = true;
+            this.txtId_Cliente.ValidarNumeros = true;
+            this.txtId_Cliente.TextChanged += new System.EventHandler(this.txtId_Cliente_TextChanged);
             // 
             // MantenimientoClientes
             // 

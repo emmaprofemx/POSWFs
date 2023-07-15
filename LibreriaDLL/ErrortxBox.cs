@@ -23,5 +23,11 @@ namespace LibreriaDLL
             set;
             get;
         }
+
+        public Boolean ValidarNumeros
+        {
+            set;
+            get;
+        }
     }
 }

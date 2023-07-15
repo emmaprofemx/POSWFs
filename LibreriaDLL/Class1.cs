@@ -61,9 +61,38 @@ namespace LibreriaDLL
                             SiError = true;
                         }
                     }
-                    else
+                    if (objeto.ValidarNumeros == true)
                     {
-                        ErrorProvider.SetError(objeto, "");
+                        int contador = 0 , EncontrarLetras = 0;
+
+                        //Utilizando foreachr para recorrer si los campos contienen letras o no
+
+                        //Contrar los caracteres que se estan recorriendo
+                        
+                        foreach (char letra in objeto.Text.Trim())
+                        {
+                            if (char.IsLetter(objeto.Text.Trim() , contador))
+                            {
+                                //
+                                EncontrarLetras++;
+                            }
+                            //Para que no se quede en la primera posicion , si no para que recorra los demas textBox
+                            contador++;
+                        }
+                        /*Lo que hacemos aqui es:
+                         * Supongamos que en el campo ID el usuario ingresa numeros:
+                         * 123456
+                         * hasta el momento todo bien , ya que ese campo sera exclusivamente de numeros.
+                         * Pero si se llegara a introducir una letra , el if de arriba incrementara la 
+                         * variable EncontrarLetras , lo cual hara que mande una alerta diciendo
+                         * que solo se admiten numeros.
+                         */
+                        if (EncontrarLetras !=0 )
+                        {
+                            SiError = true;
+                            ErrorProvider.SetError(objeto, "Solo se aceptan numeros");
+                        }
+
                     }
 
                 }

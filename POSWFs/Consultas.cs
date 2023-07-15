@@ -33,8 +33,16 @@ namespace POSWFs
             //Obtenemos los datos y se mostrara en la tabla que hemos creado.
             DS = Biblioteca.Herramientas(cmd);
             return DS;
+        }
 
-
+        public DataSet BuscarArticulo(string tabla2)
+        {
+            DataSet DS2;
+            //string cmd = string.Format("SELECT * FROM " + tabla);
+            string buscar = "Select * FROM " +tabla2+" WHERE Nombre_producto LIKE ('%" + txtConsultar.Text.Trim() + "%')";
+            //Obtenemos los datos y se mostrara en la tabla que hemos creado.
+            DS2 = Biblioteca.Herramientas(buscar);
+            return DS2;
         }
 
         private void button2_Click(object sender, EventArgs e)

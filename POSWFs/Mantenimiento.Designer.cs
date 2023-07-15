@@ -29,10 +29,13 @@ namespace POSWFs
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnMConsultar = new System.Windows.Forms.Button();
             this.btnMGuardar = new System.Windows.Forms.Button();
             this.btnMNuevo = new System.Windows.Forms.Button();
             this.btnMEliminar = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSalir
@@ -83,6 +86,10 @@ namespace POSWFs
             this.btnMEliminar.UseVisualStyleBackColor = true;
             this.btnMEliminar.Click += new System.EventHandler(this.btnMEliminar_Click);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Mantenimiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -99,6 +106,7 @@ namespace POSWFs
             this.Controls.SetChildIndex(this.btnMGuardar, 0);
             this.Controls.SetChildIndex(this.btnMNuevo, 0);
             this.Controls.SetChildIndex(this.btnMEliminar, 0);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -109,5 +117,6 @@ namespace POSWFs
         public System.Windows.Forms.Button btnMGuardar;
         public System.Windows.Forms.Button btnMNuevo;
         public System.Windows.Forms.Button btnMEliminar;
+        public System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

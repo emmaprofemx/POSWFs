@@ -21,28 +21,36 @@ namespace POSWFs
 
         public override Boolean Guardar()
         {
-            try
+            
+            if (Biblioteca.ValidarFormulario(this,errorProvider1)==false)
             {
-                //Ejecutando el procedimiento almacenado sp_ActualizarClientes
+                try
+                {
+                    //Ejecutando el procedimiento almacenado sp_ActualizarClientes
 
-                /*En este apartado , se manda a llamar el procedimiento almacenado sp_ActualizarClientes
-                 * usando arrays dentro de las comillas dobles para pasarle como parametros , los datos
-                 * que se vayan ingresando en los txt de la ventana Mantenimiento productos.
-                 * 
-                 * Usamos nuestra liberia la cual nos ayudara a realizar la peticion a la BD , osea
-                 * insertamos los datos , despues con la ayuda de la liberia esta se conecta a la BD.
-                 * Si todo sale bien , se despliega un MessageBox.Show
-                 * 
-                 * Tenemos que darle compilar al proyecto para que se apliquen los cambios.
-                 */
-                string insertar_cliente = string.Format("EXEC sp_ActualizarClientes '{0}','{1}','{2}'", txtId_Cliente.Text.Trim(), txtNombre_Cliente.Text.Trim(), txtApellido_Cliente.Text.Trim());
-                Biblioteca.Herramientas(insertar_cliente);
-                MessageBox.Show("¡Cliente guardado correctamente!");
-                return true;
+                    /*En este apartado , se manda a llamar el procedimiento almacenado sp_ActualizarClientes
+                     * usando arrays dentro de las comillas dobles para pasarle como parametros , los datos
+                     * que se vayan ingresando en los txt de la ventana Mantenimiento productos.
+                     * 
+                     * Usamos nuestra liberia la cual nos ayudara a realizar la peticion a la BD , osea
+                     * insertamos los datos , despues con la ayuda de la liberia esta se conecta a la BD.
+                     * Si todo sale bien , se despliega un MessageBox.Show
+                     * 
+                     * Tenemos que darle compilar al proyecto para que se apliquen los cambios.
+                     */
+                    string insertar_cliente = string.Format("EXEC sp_ActualizarClientes '{0}','{1}','{2}'", txtId_Cliente.Text.Trim(), txtNombre_Cliente.Text.Trim(), txtApellido_Cliente.Text.Trim());
+                    Biblioteca.Herramientas(insertar_cliente);
+                    MessageBox.Show("¡Cliente guardado correctamente!");
+                    return true;
+                }
+                catch (Exception error)
+                {
+                    MessageBox.Show("Ha ocurrido un error: " + error);
+                    return false;
+                }
             }
-            catch (Exception error)
+            else
             {
-                MessageBox.Show("Ha ocurrido un error: " + error);
                 return false;
             }
         }
@@ -83,6 +91,12 @@ namespace POSWFs
         private void label4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtId_Cliente_TextChanged(object sender, EventArgs e)
+        {
+            //Cuando el usuario vuelva a escribir , el errorProvider se limpiara
+            errorProvider1.Clear();
         }
     }
 }

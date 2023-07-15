@@ -38,6 +38,7 @@ namespace POSWFs
             this.txtId_Cliente = new LibreriaDLL.ErrortxBox();
             this.txtNombre_Cliente = new LibreriaDLL.ErrortxBox();
             this.txtApellido_Cliente = new LibreriaDLL.ErrortxBox();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -125,6 +126,7 @@ namespace POSWFs
             this.txtId_Cliente.Size = new System.Drawing.Size(192, 20);
             this.txtId_Cliente.TabIndex = 21;
             this.txtId_Cliente.Validar = true;
+            this.txtId_Cliente.TextChanged += new System.EventHandler(this.txtId_Cliente_TextChanged);
             // 
             // txtNombre_Cliente
             // 
@@ -171,6 +173,7 @@ namespace POSWFs
             this.Controls.SetChildIndex(this.txtId_Cliente, 0);
             this.Controls.SetChildIndex(this.txtNombre_Cliente, 0);
             this.Controls.SetChildIndex(this.txtApellido_Cliente, 0);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

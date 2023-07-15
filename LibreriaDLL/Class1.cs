@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace LibreriaDLL
 {
@@ -35,5 +36,39 @@ namespace LibreriaDLL
 
             return dll;
         }
+
+        //Creando metodo de validacion
+        public static Boolean ValidarFormulario(Control ObjetoError , ErrorProvider ErrorProvider)
+        {
+            //Por defecto no hay errores
+            Boolean SiError = false;
+
+            //recorriendo cada campo que vayamos a validaro , que son los textbox
+            //Verifica por cada campo , si el campo es un error de ErrortxBox
+            foreach(Control campo in ObjetoError.Controls)
+            {
+                if (campo is ErrortxBox)
+                {
+                    ErrortxBox objeto = (ErrortxBox)campo;
+
+                    if(objeto.Validar == true)
+                    {
+                        //Si esta vacia
+                        if (string.IsNullOrEmpty(objeto.Text.Trim()))
+                        {
+                            ErrorProvider.SetError(objeto , "Los campos no pueden estar vacios");
+                            //Que si hay campos vacios
+                            SiError = true;
+                        }
+                    }
+                    else
+                    {
+                        ErrorProvider.SetError(objeto, "");
+                    }
+
+                }
+            }//Fin del foreach
+            return SiError;
+        }//Fin del metodo
     }
 }

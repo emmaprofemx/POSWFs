@@ -30,14 +30,15 @@ namespace POSWFs
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MantenimientoProductos));
-            this.txtId_Producto = new System.Windows.Forms.TextBox();
-            this.txtPrecio = new System.Windows.Forms.TextBox();
-            this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.txtId_Producto = new LibreriaDLL.ErrortxBox();
+            this.txtPrecio = new LibreriaDLL.ErrortxBox();
+            this.txtDescripcion = new LibreriaDLL.ErrortxBox();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,28 +61,6 @@ namespace POSWFs
             // btnSalir
             // 
             this.btnSalir.Location = new System.Drawing.Point(507, 381);
-            // 
-            // txtId_Producto
-            // 
-            this.txtId_Producto.Location = new System.Drawing.Point(184, 47);
-            this.txtId_Producto.Name = "txtId_Producto";
-            this.txtId_Producto.Size = new System.Drawing.Size(192, 20);
-            this.txtId_Producto.TabIndex = 5;
-            // 
-            // txtPrecio
-            // 
-            this.txtPrecio.Location = new System.Drawing.Point(184, 207);
-            this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(192, 20);
-            this.txtPrecio.TabIndex = 6;
-            // 
-            // txtDescripcion
-            // 
-            this.txtDescripcion.Location = new System.Drawing.Point(184, 90);
-            this.txtDescripcion.Multiline = true;
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(192, 97);
-            this.txtDescripcion.TabIndex = 7;
             // 
             // label1
             // 
@@ -110,7 +89,7 @@ namespace POSWFs
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(86, 203);
+            this.label3.Location = new System.Drawing.Point(90, 222);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 24);
             this.label3.TabIndex = 10;
@@ -141,19 +120,48 @@ namespace POSWFs
             this.label4.Text = "P R O D U C T O S";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
+            // txtId_Producto
+            // 
+            this.txtId_Producto.Location = new System.Drawing.Point(184, 47);
+            this.txtId_Producto.Name = "txtId_Producto";
+            this.txtId_Producto.Size = new System.Drawing.Size(192, 20);
+            this.txtId_Producto.TabIndex = 13;
+            this.txtId_Producto.Validar = true;
+            this.txtId_Producto.ValidarNumeros = true;
+            this.txtId_Producto.TextChanged += new System.EventHandler(this.txtId_Producto_TextChanged);
+            // 
+            // txtPrecio
+            // 
+            this.txtPrecio.Location = new System.Drawing.Point(184, 227);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(192, 20);
+            this.txtPrecio.TabIndex = 14;
+            this.txtPrecio.Validar = true;
+            this.txtPrecio.ValidarNumeros = true;
+            // 
+            // txtDescripcion
+            // 
+            this.txtDescripcion.Location = new System.Drawing.Point(184, 79);
+            this.txtDescripcion.Multiline = true;
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(192, 128);
+            this.txtDescripcion.TabIndex = 15;
+            this.txtDescripcion.Validar = true;
+            this.txtDescripcion.ValidarNumeros = false;
+            // 
             // MantenimientoProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(693, 447);
+            this.Controls.Add(this.txtDescripcion);
+            this.Controls.Add(this.txtPrecio);
+            this.Controls.Add(this.txtId_Producto);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtDescripcion);
-            this.Controls.Add(this.txtPrecio);
-            this.Controls.Add(this.txtId_Producto);
             this.Name = "MantenimientoProductos";
             this.Text = "MantenimientoProductos";
             this.Load += new System.EventHandler(this.MantenimientoProductos_Load);
@@ -162,14 +170,15 @@ namespace POSWFs
             this.Controls.SetChildIndex(this.btnMGuardar, 0);
             this.Controls.SetChildIndex(this.btnMNuevo, 0);
             this.Controls.SetChildIndex(this.btnMEliminar, 0);
-            this.Controls.SetChildIndex(this.txtId_Producto, 0);
-            this.Controls.SetChildIndex(this.txtPrecio, 0);
-            this.Controls.SetChildIndex(this.txtDescripcion, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.label3, 0);
             this.Controls.SetChildIndex(this.pictureBox1, 0);
             this.Controls.SetChildIndex(this.label4, 0);
+            this.Controls.SetChildIndex(this.txtId_Producto, 0);
+            this.Controls.SetChildIndex(this.txtPrecio, 0);
+            this.Controls.SetChildIndex(this.txtDescripcion, 0);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -177,14 +186,13 @@ namespace POSWFs
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txtId_Producto;
-        private System.Windows.Forms.TextBox txtPrecio;
-        private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label4;
+        private LibreriaDLL.ErrortxBox txtId_Producto;
+        private LibreriaDLL.ErrortxBox txtPrecio;
+        private LibreriaDLL.ErrortxBox txtDescripcion;
     }
 }

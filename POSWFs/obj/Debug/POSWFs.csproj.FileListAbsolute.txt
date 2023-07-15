@@ -20,3 +20,4 @@ D:\PDVCSHARP\POSWFs\POSWFs\obj\Debug\POSWFs.Procesos.resources
 D:\PDVCSHARP\POSWFs\POSWFs\obj\Debug\POSWFs.MantenimientoClientes.resources
 D:\PDVCSHARP\POSWFs\POSWFs\obj\Debug\POSWFs.MantenimientoProductos.resources
 D:\PDVCSHARP\POSWFs\POSWFs\obj\Debug\POSWFs.csproj.AssemblyReference.cache
+D:\PDVCSHARP\POSWFs\POSWFs\obj\Debug\POSWFs.ConsultarProductos.resources

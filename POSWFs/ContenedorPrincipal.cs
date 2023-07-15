@@ -107,7 +107,7 @@ namespace POSWFs
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MantenimientoClientes ManCli = new MantenimientoClientes();
-            //Llamando esta ventana en el apartado de mantenimimento
+            //Llamando esta ventana en el apartado de mantenimimento clientes
             ManCli.MdiParent = this;
             ManCli.Show();
         }
@@ -115,7 +115,7 @@ namespace POSWFs
         private void productosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MantenimientoProductos ManProduc = new MantenimientoProductos();
-            //Llamando esta ventana en el apartado de mantenimimento
+            //Llamando esta ventana en el apartado de mantenimimento productos
             ManProduc.MdiParent = this;
             ManProduc.Show();
         }
@@ -123,6 +123,20 @@ namespace POSWFs
         private void ContenedorPrincipal_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void productosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            ConsultarProductos consulPro = new ConsultarProductos();
+            consulPro.MdiParent = this;
+            consulPro.Show();
+        }
+
+        private void clientesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            ConsultarCliente consulCli = new ConsultarCliente();
+            consulCli.MdiParent = this;
+            consulCli.Show();
         }
     }
 }

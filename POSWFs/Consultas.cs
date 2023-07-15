@@ -21,8 +21,15 @@ namespace POSWFs
 
         public DataSet MostrarInfoDG(string tabla)
         {
+            /*En este apartado , se crea un metodo en el cual se pasa como parametro
+             * cualquierr tabla que nosotros deseamos obtener en nuestro DataGridView.
+             * Esto nos ayuda ahorrar tiempo y repetir codigo el cual , con la sentencia
+             * de abajo solo con pasar el query y el nombre de la tabla , esta se conectara
+             * a la BD y obtendra los datos con la ayuda de nuestra libreria.
+             * 
+             */
             DataSet DS;
-            string cmd = string.Format("SELECT * FROM" + tabla);
+            string cmd = string.Format("SELECT * FROM " + tabla);
             //Obtenemos los datos y se mostrara en la tabla que hemos creado.
             DS = Biblioteca.Herramientas(cmd);
             return DS;

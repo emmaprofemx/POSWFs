@@ -16,5 +16,10 @@ namespace POSWFs
         {
             InitializeComponent();
         }
+
+        private void ConsultarProductos_Load(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = MostrarInfoDG("Articulos").Tables[0];
+        }
     }
 }

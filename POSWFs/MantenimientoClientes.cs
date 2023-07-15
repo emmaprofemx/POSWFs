@@ -98,5 +98,10 @@ namespace POSWFs
             //Cuando el usuario vuelva a escribir , el errorProvider se limpiara
             errorProvider1.Clear();
         }
+
+        private void btnMGuardar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

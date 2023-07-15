@@ -49,6 +49,7 @@ namespace POSWFs
             // btnMGuardar
             // 
             this.btnMGuardar.Location = new System.Drawing.Point(235, 286);
+            this.btnMGuardar.Click += new System.EventHandler(this.btnMGuardar_Click);
             // 
             // btnMNuevo
             // 

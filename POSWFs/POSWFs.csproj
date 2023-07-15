@@ -127,6 +127,9 @@
     <EmbeddedResource Include="Administrador.resx">
       <DependentUpon>Administrador.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarCliente.resx">
+      <DependentUpon>ConsultarCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ConsultarProductos.resx">
       <DependentUpon>ConsultarProductos.cs</DependentUpon>
     </EmbeddedResource>

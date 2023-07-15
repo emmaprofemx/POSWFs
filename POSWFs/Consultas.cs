@@ -35,14 +35,28 @@ namespace POSWFs
             return DS;
         }
 
+        //Metodo para el DataSet el cual buscaremos productos mediante la tabla que desemos
+
         public DataSet BuscarArticulo(string tabla2)
         {
             DataSet DS2;
             //string cmd = string.Format("SELECT * FROM " + tabla);
-            string buscar = "Select * FROM " +tabla2+" WHERE Nombre_producto LIKE ('%" + txtConsultar.Text.Trim() + "%')";
+            string buscar_articulo = "Select * FROM " +tabla2+" WHERE Nombre_producto LIKE ('%" + txtConsultar.Text.Trim() + "%')";
             //Obtenemos los datos y se mostrara en la tabla que hemos creado.
-            DS2 = Biblioteca.Herramientas(buscar);
+            DS2 = Biblioteca.Herramientas(buscar_articulo);
             return DS2;
+        }
+
+        //Metodo para el DataSet para la busqueda de clientes.
+        //Se hace el cambo a Nombre_cliente
+        public DataSet BuscarClientes(string tabla3)
+        {
+            DataSet DS3;
+            //string cmd = string.Format("SELECT * FROM " + tabla);
+            string buscar_cliente = "Select * FROM " + tabla3 + " WHERE Nombre_cliente LIKE ('%" + txtConsultar.Text.Trim() + "%')";
+            //Obtenemos los datos y se mostrara en la tabla que hemos creado.
+            DS3 = Biblioteca.Herramientas(buscar_cliente);
+            return DS3;
         }
 
         private void button2_Click(object sender, EventArgs e)

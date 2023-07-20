@@ -28,5 +28,30 @@ namespace POSWFs
             lblVendedor.Text = ds.Tables[0].Rows[0]["userrname"].ToString().Trim();
         
         }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //validando si campos estan nulos
+                if (string.IsNullOrEmpty(txtCodigoCliente.Text.Trim()) == false)
+                {
+                    //comandos esenciales por consola
+                    //Extraera el campo y lo convierte a string para posteriormente agregarlo en el label
+                    string cmd = string.Format("Select Nombre_cliente from Clientes where id_clientes= '{0}'", txtCodigoCliente.Text.Trim());
+                    DataSet ds = Biblioteca.Herramientas(cmd);
+
+
+                    txtCliente.Text = ds.Tables[0].Rows[0]["Nombre_cliente"].ToString().Trim();
+
+                    txtCodigoProducto.Focus();
+                }
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Ha ocurrido un error " + error.Message);
+            }
+           
+        }
     }
 }

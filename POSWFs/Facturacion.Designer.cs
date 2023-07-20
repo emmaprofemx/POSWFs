@@ -29,6 +29,7 @@ namespace POSWFs
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtCodigoCliente = new LibreriaDLL.ErrortxBox();
@@ -55,8 +56,10 @@ namespace POSWFs
             this.txtPrecio = new LibreriaDLL.ErrortxBox();
             this.txtCantidad = new LibreriaDLL.ErrortxBox();
             this.lblTotal = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSalir
@@ -72,6 +75,7 @@ namespace POSWFs
             this.btnBuscar.TabIndex = 1;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // label1
             // 
@@ -99,17 +103,17 @@ namespace POSWFs
             this.txtCliente.Name = "txtCliente";
             this.txtCliente.Size = new System.Drawing.Size(215, 20);
             this.txtCliente.TabIndex = 18;
-            this.txtCliente.Validar = false;
+            this.txtCliente.Validar = true;
             this.txtCliente.ValidarNumeros = false;
             // 
             // txtCodigoProducto
             // 
-            this.txtCodigoProducto.Location = new System.Drawing.Point(49, 260);
+            this.txtCodigoProducto.Location = new System.Drawing.Point(51, 260);
             this.txtCodigoProducto.Multiline = true;
             this.txtCodigoProducto.Name = "txtCodigoProducto";
             this.txtCodigoProducto.Size = new System.Drawing.Size(147, 29);
             this.txtCodigoProducto.TabIndex = 21;
-            this.txtCodigoProducto.Validar = false;
+            this.txtCodigoProducto.Validar = true;
             this.txtCodigoProducto.ValidarNumeros = false;
             // 
             // dataGridView1
@@ -297,7 +301,7 @@ namespace POSWFs
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(147, 29);
             this.txtDescripcion.TabIndex = 45;
-            this.txtDescripcion.Validar = false;
+            this.txtDescripcion.Validar = true;
             this.txtDescripcion.ValidarNumeros = false;
             // 
             // txtPrecio
@@ -307,7 +311,7 @@ namespace POSWFs
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(147, 29);
             this.txtPrecio.TabIndex = 46;
-            this.txtPrecio.Validar = false;
+            this.txtPrecio.Validar = true;
             this.txtPrecio.ValidarNumeros = false;
             // 
             // txtCantidad
@@ -317,7 +321,7 @@ namespace POSWFs
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(147, 29);
             this.txtCantidad.TabIndex = 47;
-            this.txtCantidad.Validar = false;
+            this.txtCantidad.Validar = true;
             this.txtCantidad.ValidarNumeros = false;
             // 
             // lblTotal
@@ -327,6 +331,10 @@ namespace POSWFs
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(113, 24);
             this.lblTotal.TabIndex = 48;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // Facturacion
             // 
@@ -391,6 +399,7 @@ namespace POSWFs
             this.Controls.SetChildIndex(this.btnSalir, 0);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -424,5 +433,6 @@ namespace POSWFs
         private LibreriaDLL.ErrortxBox txtPrecio;
         private LibreriaDLL.ErrortxBox txtCantidad;
         private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

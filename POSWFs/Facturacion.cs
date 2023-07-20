@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace POSWFs
 {
-    public partial class Facturacion : Form
+    public partial class Facturacion : Procesos
     {
         public Facturacion()
         {

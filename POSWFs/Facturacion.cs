@@ -38,11 +38,13 @@ namespace POSWFs
                 {
                     //comandos esenciales por consola
                     //Extraera el campo y lo convierte a string para posteriormente agregarlo en el label
-                    string cmd = string.Format("Select Nombre_cliente from Clientes where id_clientes= '{0}'", txtCodigoCliente.Text.Trim());
+                    string cmd = string.Format("Select Nombre_cliente , Apellido_cliente from Clientes where id_clientes= '{0}'", txtCodigoCliente.Text.Trim());
                     DataSet ds = Biblioteca.Herramientas(cmd);
 
-
-                    txtCliente.Text = ds.Tables[0].Rows[0]["Nombre_cliente"].ToString().Trim();
+                    //Agregando el nombre y apllido en el label
+                    string nombreCliente = ds.Tables[0].Rows[0]["Nombre_cliente"].ToString().Trim();
+                    string apellidoCliente = ds.Tables[0].Rows[0]["Apellido_cliente"].ToString().Trim();
+                    txtCliente.Text = $"{nombreCliente} {apellidoCliente}";
 
                     txtCodigoProducto.Focus();
                 }

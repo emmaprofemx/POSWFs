@@ -138,5 +138,13 @@ namespace POSWFs
             consulCli.MdiParent = this;
             consulCli.Show();
         }
+
+        private void facturaciónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Facturacion factu = new Facturacion();
+            factu.MdiParent = this;
+            //Nos muestre la ventana de facturacion
+            factu.Show();
+        }
     }
 }

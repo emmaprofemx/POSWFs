@@ -177,10 +177,32 @@ namespace POSWFs
             catch (Exception error)
             {
                 // Manejo de excepciones
-                MessageBox.Show("Error " + error);
+                MessageBox.Show("Error " + error.Message);
             }
+        }
 
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (contadorFila > 0)
+                {
+                    // Obtenemos el valor contenido en la celda 4 (importe) de la fila seleccionada
+                    double importe = Convert.ToDouble(dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[4].Value);
 
+                    // Restamos el importe al total
+                    total -= importe;
+                    lblTotal.Text = "$ " + total.ToString();
+
+                    // Eliminamos la fila seleccionada
+                    dataGridView1.Rows.RemoveAt(dataGridView1.CurrentRow.Index);
+                    contadorFila--;
+                }
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Error al eliminar " + error.Message);
+            }
 
 
         }

@@ -102,5 +102,65 @@ namespace POSWFs
         {
             evaluarNumeros(e);
         }
+
+        //Creando variable contador para contar cuantos articulos agregamos
+        public static int contadorFila = 0;
+
+        private void btnColocar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Si el campo no está vacío
+                if (Biblioteca.ValidarFormulario(this, errorProvider1) == false)
+                {
+                    // Validar que no se esté repitiendo un producto, admita artículo nuevo
+                    bool existe = false;
+                    // Esta variable nos sirve para arrancar desde la primera fila
+                    int numeroFila = -1; // Inicializamos en -1 para detectar si encontramos la fila repetida.
+
+                    // Recorremos todas las filas del DataGridView para verificar si el producto ya existe
+                    foreach (DataGridViewRow fila in dataGridView1.Rows)
+                    {
+                        // Si el código del producto en la fila actual coincide con el que intentamos agregar
+                        if (fila.Cells[0].Value.ToString() == txtCodigoProducto.Text)
+                        {
+                            existe = true;
+                            numeroFila = fila.Index; // Obtenemos el índice de la fila que coincide
+                            break; // Salimos del bucle, no necesitamos seguir buscando
+                        }
+                    }
+
+                    if (existe)
+                    {
+                        // Actualizamos la cantidad del producto existente en lugar de agregar una nueva fila
+                        dataGridView1.Rows[numeroFila].Cells[3].Value = (Convert.ToDouble(txtCantidad.Text) + Convert.ToDouble(dataGridView1.Rows[numeroFila].Cells[3].Value)).ToString();
+                    }
+                    else
+                    {
+                        // Agregamos una nueva fila al DataGridView
+                        dataGridView1.Rows.Add(txtCodigoProducto.Text, txtDescripcion.Text, txtPrecio.Text, txtCantidad.Text);
+                        numeroFila = dataGridView1.Rows.Count - 1; // Actualizamos el número de fila para la nueva entrada.
+                        contadorFila++; // Incrementamos el contador de filas.
+                    }
+
+                    // Obtenemos el precio actualizado del producto ingresado
+                    double precio = Convert.ToDouble(txtPrecio.Text);
+
+                    // Realizando el cálculo del importe precio * cantidad
+                    double importe = precio * Convert.ToDouble(dataGridView1.Rows[numeroFila].Cells[3].Value);
+                    // Insertando el importe en nuestra columna 4 del dataGridView
+                    dataGridView1.Rows[numeroFila].Cells[4].Value = importe;
+                }
+            }
+            catch (Exception error)
+            {
+                // Manejo de excepciones
+                MessageBox.Show("Error " + error);
+            }
+
+
+
+
+        }
     }
 }

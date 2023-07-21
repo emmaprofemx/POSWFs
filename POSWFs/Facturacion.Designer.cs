@@ -62,6 +62,11 @@ namespace POSWFs
             this.label8 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -69,7 +74,7 @@ namespace POSWFs
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(999, 593);
+            this.btnSalir.Location = new System.Drawing.Point(999, 604);
             // 
             // btnBuscar
             // 
@@ -108,10 +113,13 @@ namespace POSWFs
             // 
             // txtCliente
             // 
+            this.txtCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCliente.Location = new System.Drawing.Point(134, 158);
+            this.txtCliente.Multiline = true;
             this.txtCliente.Name = "txtCliente";
-            this.txtCliente.Size = new System.Drawing.Size(215, 20);
+            this.txtCliente.Size = new System.Drawing.Size(215, 29);
             this.txtCliente.TabIndex = 18;
+            this.txtCliente.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtCliente.Validar = true;
             this.txtCliente.ValidarNumeros = false;
             // 
@@ -130,10 +138,19 @@ namespace POSWFs
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(19, 320);
+            this.dataGridView1.ColumnHeadersVisible = false;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Codigo,
+            this.Descripcion,
+            this.Precio,
+            this.Cantidad,
+            this.Importe});
+            this.dataGridView1.Location = new System.Drawing.Point(25, 360);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1089, 273);
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.Size = new System.Drawing.Size(1089, 240);
             this.dataGridView1.TabIndex = 23;
             // 
             // pictureBox1
@@ -171,7 +188,7 @@ namespace POSWFs
             this.label4.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label4.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(20, 322);
+            this.label4.Location = new System.Drawing.Point(25, 325);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(213, 35);
             this.label4.TabIndex = 27;
@@ -227,6 +244,7 @@ namespace POSWFs
             this.btnColocar.TabIndex = 36;
             this.btnColocar.Text = "Colocar";
             this.btnColocar.UseVisualStyleBackColor = true;
+            this.btnColocar.Click += new System.EventHandler(this.btnColocar_Click);
             // 
             // btnProductos
             // 
@@ -243,7 +261,7 @@ namespace POSWFs
             this.label9.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label9.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(232, 322);
+            this.label9.Location = new System.Drawing.Point(237, 325);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(226, 35);
             this.label9.TabIndex = 38;
@@ -255,7 +273,7 @@ namespace POSWFs
             this.label10.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label10.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(456, 322);
+            this.label10.Location = new System.Drawing.Point(461, 325);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(221, 35);
             this.label10.TabIndex = 39;
@@ -267,7 +285,7 @@ namespace POSWFs
             this.label11.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label11.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(672, 322);
+            this.label11.Location = new System.Drawing.Point(677, 325);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(240, 35);
             this.label11.TabIndex = 40;
@@ -279,7 +297,7 @@ namespace POSWFs
             this.label12.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label12.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(905, 322);
+            this.label12.Location = new System.Drawing.Point(910, 325);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(202, 35);
             this.label12.TabIndex = 41;
@@ -291,7 +309,7 @@ namespace POSWFs
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(763, 592);
+            this.label5.Location = new System.Drawing.Point(763, 602);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(76, 29);
             this.label5.TabIndex = 42;
@@ -346,7 +364,7 @@ namespace POSWFs
             // lblTotal
             // 
             this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(845, 596);
+            this.lblTotal.Location = new System.Drawing.Point(845, 607);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(113, 24);
             this.lblTotal.TabIndex = 48;
@@ -417,6 +435,36 @@ namespace POSWFs
             this.label14.Size = new System.Drawing.Size(123, 29);
             this.label14.TabIndex = 53;
             this.label14.Text = "Cantidad:";
+            // 
+            // Codigo
+            // 
+            this.Codigo.HeaderText = "Código";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.Width = 218;
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.HeaderText = "Descripción";
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.Width = 217;
+            // 
+            // Precio
+            // 
+            this.Precio.HeaderText = "Precio";
+            this.Precio.Name = "Precio";
+            this.Precio.Width = 217;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.Width = 217;
+            // 
+            // Importe
+            // 
+            this.Importe.HeaderText = "Importe";
+            this.Importe.Name = "Importe";
+            this.Importe.Width = 217;
             // 
             // Facturacion
             // 
@@ -531,5 +579,10 @@ namespace POSWFs
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Importe;
     }
 }

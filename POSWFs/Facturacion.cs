@@ -214,11 +214,14 @@ namespace POSWFs
 
             if (consulCliente.DialogResult == DialogResult.OK)
             {
+                txtCodigoCliente.Text = consulCliente.dataGridView1.Rows[consulCliente.dataGridView1.CurrentRow.Index].Cells[0].Value.ToString();
+
                 string nombre_cli = consulCliente.dataGridView1.Rows[consulCliente.dataGridView1.CurrentRow.Index].Cells[1].Value.ToString(); ;
                 string apellidos_cli = consulCliente.dataGridView1.Rows[consulCliente.dataGridView1.CurrentRow.Index].Cells[2].Value.ToString(); ;
-                txtCodigoCliente.Text = consulCliente.dataGridView1.Rows[consulCliente.dataGridView1.CurrentRow.Index].Cells[0].Value.ToString();
+               
                 txtCliente.Text = $"{nombre_cli} {apellidos_cli}";
 
+                //Posiciona con el metodo Focus en el apartado de Codigo Producto
                 txtCodigoProducto.Focus();
             }
 

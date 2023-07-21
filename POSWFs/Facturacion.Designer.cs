@@ -36,6 +36,11 @@ namespace POSWFs
             this.txtCliente = new LibreriaDLL.ErrortxBox();
             this.txtCodigoProducto = new LibreriaDLL.ErrortxBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -62,11 +67,6 @@ namespace POSWFs
             this.label8 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -156,6 +156,36 @@ namespace POSWFs
             this.dataGridView1.Size = new System.Drawing.Size(1089, 240);
             this.dataGridView1.TabIndex = 23;
             // 
+            // Codigo
+            // 
+            this.Codigo.HeaderText = "Código";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.Width = 218;
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.HeaderText = "Descripción";
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.Width = 217;
+            // 
+            // Precio
+            // 
+            this.Precio.HeaderText = "Precio";
+            this.Precio.Name = "Precio";
+            this.Precio.Width = 217;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.Width = 217;
+            // 
+            // Importe
+            // 
+            this.Importe.HeaderText = "Importe";
+            this.Importe.Name = "Importe";
+            this.Importe.Width = 217;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(470, 9);
@@ -207,6 +237,7 @@ namespace POSWFs
             this.btnClientes.TabIndex = 32;
             this.btnClientes.Text = "Clientes";
             this.btnClientes.UseVisualStyleBackColor = true;
+            this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
             // 
             // btnEliminar
             // 
@@ -228,6 +259,7 @@ namespace POSWFs
             this.btnNuevo.TabIndex = 34;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnFacturar
             // 
@@ -259,6 +291,7 @@ namespace POSWFs
             this.btnProductos.TabIndex = 37;
             this.btnProductos.Text = "Productos";
             this.btnProductos.UseVisualStyleBackColor = true;
+            this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
             // 
             // label9
             // 
@@ -345,9 +378,10 @@ namespace POSWFs
             this.txtPrecio.Location = new System.Drawing.Point(739, 274);
             this.txtPrecio.Multiline = true;
             this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.ReadOnly = true;
             this.txtPrecio.Size = new System.Drawing.Size(147, 29);
             this.txtPrecio.TabIndex = 46;
-            this.txtPrecio.Text = "$0.0";
+            this.txtPrecio.Text = "$0.00";
             this.txtPrecio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtPrecio.Validar = true;
             this.txtPrecio.ValidarNumeros = false;
@@ -439,36 +473,6 @@ namespace POSWFs
             this.label14.Size = new System.Drawing.Size(123, 29);
             this.label14.TabIndex = 53;
             this.label14.Text = "Cantidad:";
-            // 
-            // Codigo
-            // 
-            this.Codigo.HeaderText = "Código";
-            this.Codigo.Name = "Codigo";
-            this.Codigo.Width = 218;
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.HeaderText = "Descripción";
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.Width = 217;
-            // 
-            // Precio
-            // 
-            this.Precio.HeaderText = "Precio";
-            this.Precio.Name = "Precio";
-            this.Precio.Width = 217;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.Width = 217;
-            // 
-            // Importe
-            // 
-            this.Importe.HeaderText = "Importe";
-            this.Importe.Name = "Importe";
-            this.Importe.Width = 217;
             // 
             // Facturacion
             // 

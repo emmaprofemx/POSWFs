@@ -206,5 +206,61 @@ namespace POSWFs
 
 
         }
+
+        private void btnClientes_Click(object sender, EventArgs e)
+        {
+            ConsultarCliente consulCliente = new ConsultarCliente();
+            consulCliente.ShowDialog();
+
+            if (consulCliente.DialogResult == DialogResult.OK)
+            {
+                string nombre_cli = consulCliente.dataGridView1.Rows[consulCliente.dataGridView1.CurrentRow.Index].Cells[1].Value.ToString(); ;
+                string apellidos_cli = consulCliente.dataGridView1.Rows[consulCliente.dataGridView1.CurrentRow.Index].Cells[2].Value.ToString(); ;
+                txtCodigoCliente.Text = consulCliente.dataGridView1.Rows[consulCliente.dataGridView1.CurrentRow.Index].Cells[0].Value.ToString();
+                txtCliente.Text = $"{nombre_cli} {apellidos_cli}";
+
+                txtCodigoProducto.Focus();
+            }
+
+        }
+
+        private void btnProductos_Click(object sender, EventArgs e)
+        {
+            ConsultarProductos consulPro = new ConsultarProductos();
+            consulPro.ShowDialog();
+
+            if (consulPro.DialogResult == DialogResult.OK) 
+            {
+                txtCodigoProducto.Text = consulPro.dataGridView1.Rows[consulPro.dataGridView1.CurrentRow.Index].Cells[0].Value.ToString();
+                txtDescripcion.Text = consulPro.dataGridView1.Rows[consulPro.dataGridView1.CurrentRow.Index].Cells[1].Value.ToString();
+                txtPrecio.Text = consulPro.dataGridView1.Rows[consulPro.dataGridView1.CurrentRow.Index].Cells[2].Value.ToString();
+                txtCantidad.Focus();
+            }
+        }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            //Lo que codificaremos , es que se borre lo de gridview cuando hagamos una facturacion
+            Nuevo();
+        }
+
+        public override void Nuevo()
+        {
+            //Limpiando los campos
+            txtCodigoCliente.Text = "";
+            txtCliente.Text = "";
+            txtCodigoProducto.Text = "";
+            txtDescripcion.Text = "";
+            txtPrecio.Text = "$0.00";
+            txtCantidad.Text = "0";
+            lblTotal.Text = "$ 0.00";
+            //borrando todo lo de datagridview
+            dataGridView1.Rows.Clear();
+            contadorFila = 0;
+            total = 0;
+            //Una vez que limpie todo , se posiciona con el metodo Focus en el apartado de Codigo Cliente
+            txtCodigoCliente.Focus();
+
+        }
     }
 }

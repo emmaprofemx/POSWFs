@@ -29,6 +29,23 @@ namespace POSWFs
         
         }
 
+        private void evaluarNumeros(KeyPressEventArgs e)
+        {
+            try
+            {
+                // Verificar si la tecla presionada es un número o la tecla de retroceso (Backspace)
+                if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+                {
+                    // Si no es un número ni Backspace, cancelar la tecla pulsada para que no aparezca en el TextBox.
+                    e.Handled = true;
+                }
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("No se admiten letras! " + error.Message);
+            }
+        }
+
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             try
@@ -54,6 +71,36 @@ namespace POSWFs
                 MessageBox.Show("Ha ocurrido un error " + error.Message);
             }
            
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCodigoProducto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            evaluarNumeros(e);
+        }
+
+        private void txtCodigoCliente_TextChanged(object sender, EventArgs e)
+        {
+           // evaluarNumeros();
+        }
+
+        private void txtCodigoCliente_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            evaluarNumeros(e);
         }
     }
 }

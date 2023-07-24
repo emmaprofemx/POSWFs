@@ -270,6 +270,7 @@ namespace POSWFs
             this.btnFacturar.TabIndex = 35;
             this.btnFacturar.Text = "Facturar";
             this.btnFacturar.UseVisualStyleBackColor = true;
+            this.btnFacturar.Click += new System.EventHandler(this.btnFacturar_Click);
             // 
             // btnColocar
             // 

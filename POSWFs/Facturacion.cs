@@ -265,5 +265,58 @@ namespace POSWFs
             txtCodigoCliente.Focus();
 
         }
+
+        private void btnFacturar_Click(object sender, EventArgs e)
+        {
+
+
+            /* Antes de imprimir la factura ,checaremos si no tenemos nada en el grid , 
+             * en caso de que tengamos vacia nuestra lista no tendra caso mandar 
+             * la factura ya que no hay articulos agregados.
+             */
+
+            //Si tiene algo
+            if (contadorFila!=0)
+            {
+                try
+                {
+                    string cmd = string.Format("EXEC ActualizarFacturas '{0}'" , txtCodigoCliente.Text.Trim());
+                    DataSet DS = Biblioteca.Herramientas(cmd);
+
+                    string numeroFactura = DS.Tables[0].Rows[0]["NumeroFactura"].ToString().Trim();
+
+
+                    //Pasando los articulos del datagridview a la factura
+
+                    foreach (DataGridViewRow Fila in dataGridView1.Rows)
+                    {
+                        cmd = string.Format("EXEC ActualizarDetalles '{0}','{1}','{2}','{3}'", numeroFactura,
+                            Fila.Cells[0].Value.ToString(),
+                            Fila.Cells[2].Value.ToString(),
+                            Fila.Cells[3].Value.ToString());
+                        DS = Biblioteca.Herramientas(cmd);
+                    }
+                    cmd = "EXEC DatosFactura " + numeroFactura;
+
+                    DS = Biblioteca.Herramientas(cmd);
+
+                    //Mostrando en la ventana de facturacion
+
+                    Factura fac = new Factura();
+                    fac.reportViewer1.LocalReport.DataSources[0].Value = DS.Tables[0];
+                    fac.ShowDialog();
+
+                    //metodo para limpiar los campos de la interfaz de factura
+                    Nuevo();
+
+
+                }
+                catch (Exception error)
+                {
+                    MessageBox.Show("Error " + error.Message);
+                }
+
+            }
+        }
     }
 }

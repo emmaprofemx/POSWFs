@@ -29,17 +29,42 @@ namespace POSWFs
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.DataSet1 = new POSWFs.DataSet1();
+            this.DatosFacturaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.DatosFacturaTableAdapter = new POSWFs.DataSet1TableAdapters.DatosFacturaTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.DataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DatosFacturaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.DatosFacturaBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "POSWFs.Informe1.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(584, 749);
             this.reportViewer1.TabIndex = 0;
+            // 
+            // DataSet1
+            // 
+            this.DataSet1.DataSetName = "DataSet1";
+            this.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // DatosFacturaBindingSource
+            // 
+            this.DatosFacturaBindingSource.DataMember = "DatosFactura";
+            this.DatosFacturaBindingSource.DataSource = this.DataSet1;
+            // 
+            // DatosFacturaTableAdapter
+            // 
+            this.DatosFacturaTableAdapter.ClearBeforeFill = true;
             // 
             // Factura
             // 
@@ -50,12 +75,17 @@ namespace POSWFs
             this.Name = "Factura";
             this.Text = "Factura";
             this.Load += new System.EventHandler(this.Factura_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.DataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DatosFacturaBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        public Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.BindingSource DatosFacturaBindingSource;
+        private DataSet1 DataSet1;
+        private DataSet1TableAdapters.DatosFacturaTableAdapter DatosFacturaTableAdapter;
     }
 }

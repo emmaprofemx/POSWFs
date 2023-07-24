@@ -16,5 +16,11 @@ namespace POSWFs
         {
             InitializeComponent();
         }
+
+        private void Factura_Load(object sender, EventArgs e)
+        {
+
+            this.reportViewer1.RefreshReport();
+        }
     }
 }

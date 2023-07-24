@@ -306,7 +306,6 @@ namespace POSWFs
                     fac.reportViewer1.LocalReport.DataSources[0].Value = DS.Tables[0];
                     fac.ShowDialog();
 
-                    //metodo para limpiar los campos de la interfaz de factura
                     Nuevo();
 
 

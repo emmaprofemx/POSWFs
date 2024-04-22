@@ -6,7 +6,7 @@
 POS C# - WF| Project Personal | Personal xd
 
 ### Descripción 
-Este proyecto es un      sistema de Punto de Venta desarrollado en C# utilizando el framework de Windows Forms para la interfaz gráfica , y SQL Server Management Stuido para la Base de Datos.
+This project is a Point of Sale system developed in C# using the Windows Forms framework for the graphical interface, and SQL Server Management Suite for the Database.
 
 ### Requisitos 
 * Windows 7 o versiones posteriores.

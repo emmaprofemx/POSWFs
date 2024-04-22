@@ -9,6 +9,6 @@ POS C# - WF| Project Personal | Personal xd
 This project is a Point of Sale system developed in C# using the Windows Forms framework for the graphical interface, and SQL Server Management Suite for the Database.
 
 ### Requisitos 
-* Windows 7 o versiones posteriores.
-* Microsoft .NET Framework 4.5 o superior.
-* Servidor de base de datos SQL (por ejemplo, Microsoft SQL Server).
+* Windows 7 or later versions.
+* Microsoft .NET Framework 4.5 or higher.
+* SQL database server (e.g. Microsoft SQL Server).
